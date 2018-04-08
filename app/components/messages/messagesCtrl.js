@@ -11,5 +11,12 @@ mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messag
         $scope.newMessage = {};
         //$modalInstance.close();
     }
+    $scope.filterInMessages = function (messages) {
+        if ((!$scope.searchMessages || messages.messageSubject.toLowerCase().includes($scope.searchMessages.toLowerCase())) &&
+            ($scope.filterMessages==messages.messageType || $scope.filterMessages == 'No Filter' || !$scope.filterMessages)) {
+            return true;
+        }
+        return false;
+    };
 
 })

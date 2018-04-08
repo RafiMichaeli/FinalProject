@@ -1,17 +1,20 @@
 <div class="bg-light" ng-controller="messagesCtrl">
     <div class="row mx-auto form-inline form-group ">
         <div class="col form-group m-2">
-            <input type="search" class="form-control w-50 m-2" name="" id="searchMessages" placeholder="Filter by title of message text">
+            <input type="search" class="form-control w-50 m-2" name="" id="searchInMessages" placeholder="Search by title of message text"
+                ng-model="searchMessages">
             <label for="filterBy">Filter By:</label>
-            <select class="form-control m-2" id="filterBy">
+            <select class="form-control m-2" id="filterBy" ng-model="filterMessages">
                 <option>No Filter</option>
-                <option>Filter By Type</option>
+                <option value="info">Information</option>
+                <option value="warning">Important</option>
+                <option value="build">Maintanance</option>
             </select>
             <label for="sortBy">Sort By:</label>
             <label class="radio-inline">
-                <input class="m-2" type="radio" name="sortBy">Date</label>
+                <input class="m-2" type="radio" name="sortBy" ng-model="sortBy" value="'messageCreatedAt'">Date</label>
             <label class="radio-inline">
-                <input class="m-2" type="radio" name="sortBy">Type</label>
+                <input class="m-2" type="radio" name="sortBy" ng-model="sortBy" value="'messageType'">Type</label>
         </div>
     </div>
     <div class="row">
@@ -28,7 +31,7 @@
     <div class="modal fade" id="newMessageModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
-                <div class="modal-header float-left">
+                <div class="modal-header float-left bg-light">
                     <h4 class="modal-title" id="modelTitleId">Create new message</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -45,7 +48,6 @@
                             <select class="form-control w-50" id="newMessageType" ng-model="newMessage.messageType">
                                 <option value="">--Select Message Type--</option>
                                 <option value="info">Information</option>
-                                <i class="material-icons info">info</i>
                                 <option value="warning">Important</option>
                                 <option value="build">Maintanance</option>
                             </select>
@@ -64,12 +66,13 @@
     </div>
     <div class="row m-3 p-3">
         <div id="accordion">
-            <div class="card" ng-repeat="message in messages">
+            <div class="card" ng-repeat="message in messages | orderBy: sortBy | filter: filterInMessages">
                 <div class="card-header" id="heading{{message.messageId}}">
                     <h5 class="mb-0">
                         <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{message.messageId}}" aria-expanded="false" aria-controls="collapse{{message.messageId}}">
                             {{message.messageSubject}}
                         </button>
+                        <span>{{message.messageCreatedAt}}</span>
                         <i class="material-icons float-right text-primary">{{message.messageType}}</i>
                     </h5>
                 </div>
