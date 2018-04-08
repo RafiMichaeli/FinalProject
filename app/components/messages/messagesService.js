@@ -8,6 +8,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
         this.messageCreatedAt = messageCreatedAt;
         this.messageSubject = messageSubject;
         this.messageBody = messageBody;
+       // if ()
         this.messageType = messageType;
         this.messageComments = messageComments;
     }
@@ -42,6 +43,9 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
     function newMessage() {
 
     }
+    //function (getMessages) {
+    
+     // }
     return {
         newMessage: newMessage,
         messages: messages,

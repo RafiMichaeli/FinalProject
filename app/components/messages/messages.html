@@ -29,24 +29,29 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header float-left">
+                    <h4 class="modal-title" id="modelTitleId">Create new message</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <h4 class="modal-title" id="modelTitleId">Create new message</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="align-left">
+                    <form class="align-left col">
                         <div class="form-group">
-                            <label class="" for="newMessageSubject"></label>
+                            <label class="" for="newMessageSubject">Subject: </label>
                             <input class="border w-50" type="text" name="" id="newMessageSubject" placeholder="Message Subject">
-                            <label class="" for="newMessageBody"></label>
+                            <label class="" for="newMessageBody">Body: </label>
                             <textarea type="text" class="form-control" id="newMessageBody" placeholder="Type your message here"></textarea>
+                            <label class="" for="newMessageType">Type: </label>
                             <select class="form-control w-50" id="newMessageType">
                                 <option value="">--Select Message Type--</option>
-                                <option value="info">Information</option><i class="material-icons info">info</i>
+                                <option value="info">Information</option>
+                                <i class="material-icons info">info</i>
                                 <option value="warning">Important</option>
                                 <option value="build">Maintanance</option>
                             </select>
+                            <!--label for="imgLoad">Image Load: </label>
+                            <input type="file" name="" id="imgLoad" ng-model="imgLoad">
+                            <img src="{{imgLoad.path}}" alt="" srcset=""-->
                         </div>
                     </form>
                     <div class="modal-footer">
