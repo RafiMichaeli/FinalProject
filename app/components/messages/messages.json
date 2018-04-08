@@ -1,0 +1,47 @@
+[
+    {
+        "messageId" : 1,
+        "messageCreatedBy" : "user@email.com",
+        "messageCreatedAt" : "04-04-2018",
+        "messageSubject" : "Information about Gas",
+        "messageBody" : "gas price is going up by 10% next week",
+        "messageType" : "info",
+		"messageComments" : "Comments"
+    },
+	{
+        "messageId" : 2,
+        "messageCreatedBy" : "user@email.com",
+        "messageCreatedAt" : "04-04-2018",
+        "messageSubject" : "Information about water",
+        "messageBody" : "water price is going up 15% next week",
+        "messageType" : "info",
+		"messageComments" : "Comments"
+    },
+	{
+        "messageId" : 3,
+        "messageCreatedBy" : "user@email.com",
+        "messageCreatedAt" : "04-04-2018",
+        "messageSubject" : "Close Down Notice",
+        "messageBody" : "the main road next to the building will be close down for a week due to pothole filling",
+        "messageType" : "warning",
+		"messageComments" : "Comments"
+    },
+	{
+        "messageId" : 4,
+        "messageCreatedBy" : "user@email.com",
+        "messageCreatedAt" : "04-04-2018",
+        "messageSubject" : "Information about internet maintanance",
+        "messageBody" : "internet will be down for 2 hours tommorow for upgrading",
+        "messageType" : "build",
+		"messageComments" : "Comments"
+    },
+	{
+        "messageId" : 5,
+        "messageCreatedBy" : "user@email.com",
+        "messageCreatedAt" : "04-04-2018",
+        "messageSubject" : "Snow expected next week",
+        "messageBody" : "snow is expcted next week so make sure you have salt and pepper",
+        "messageType" : "warning",
+		"messageComments" : "Comments"
+    }
+]
