@@ -6,4 +6,10 @@ mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messag
         $scope.messages = messagesService.messages;
     });
 
+    $scope.createMessage = function(){
+        messagesService.createNewMessage($scope.newMessage);
+        $scope.newMessage = {};
+        //$modalInstance.close();
+    }
+
 })

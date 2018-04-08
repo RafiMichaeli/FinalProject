@@ -8,7 +8,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
         this.messageCreatedAt = messageCreatedAt;
         this.messageSubject = messageSubject;
         this.messageBody = messageBody;
-       // if ()
+        // if ()
         this.messageType = messageType;
         this.messageComments = messageComments;
     }
@@ -40,14 +40,32 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
 
         return async.promise;
     }
-    function newMessage() {
-
+    function creatNewMessage(newMessage) {
+        var message = new Message(
+            messages.length + 1,
+            "currentUser",
+            ""+new Date(),
+            newMessage.messageSubject,
+            newMessage.messageBody,
+            newMessage.messageType,
+            []);
+        messages.push(message);
     }
+
+
+    // function addCar(brand, model, year, km, testDate) {
+    //   var car = new Car(brand, model, year, km, testDate);
+    //   cars.push(car);
+
+
+
+
     //function (getMessages) {
-    
-     // }
+
+    // }
+
     return {
-        newMessage: newMessage,
+        createNewMessage: creatNewMessage,
         messages: messages,
         load: load
     }

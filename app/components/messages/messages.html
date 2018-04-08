@@ -35,14 +35,14 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form class="align-left col">
+                    <form class="align-left">
                         <div class="form-group">
-                            <label class="" for="newMessageSubject">Subject: </label>
-                            <input class="border w-50" type="text" name="" id="newMessageSubject" placeholder="Message Subject">
-                            <label class="" for="newMessageBody">Body: </label>
-                            <textarea type="text" class="form-control" id="newMessageBody" placeholder="Type your message here"></textarea>
-                            <label class="" for="newMessageType">Type: </label>
-                            <select class="form-control w-50" id="newMessageType">
+                            <label class="m-1" for="newMessageSubject">Subject:</label>
+                            <input class="form-control" type="text" name="" id="newMessageSubject" ng-model="newMessage.messageSubject" placeholder="Message Subject">
+                            <label class="m-1" for="newMessageBody">Body:</label>
+                            <textarea type="text" class="form-control" id="newMessageBody" ng-model="newMessage.messageBody" placeholder="Type your message here"></textarea>
+                            <label class="m-1" for="newMessageType">Type: </label>
+                            <select class="form-control w-50" id="newMessageType" ng-model="newMessage.messageType">
                                 <option value="">--Select Message Type--</option>
                                 <option value="info">Information</option>
                                 <i class="material-icons info">info</i>
@@ -56,7 +56,7 @@
                     </form>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-primary" ng-click="createMessage()" data-dismiss="modal">Save</button>
                     </div>
                 </div>
             </div>
