@@ -6,7 +6,7 @@
         "messageSubject" : "Information about Gas",
         "messageBody" : "gas price is going up by 10% next week",
         "messageType" : "info",
-		"messageComments" : "Comments"
+		"messageComments" : [1,2]
     },
 	{
         "messageId" : 2,
@@ -15,7 +15,7 @@
         "messageSubject" : "Information about water",
         "messageBody" : "water price is going up 15% next week",
         "messageType" : "info",
-		"messageComments" : "Comments"
+		"messageComments" : [3]
     },
 	{
         "messageId" : 3,
@@ -24,7 +24,7 @@
         "messageSubject" : "Close Down Notice",
         "messageBody" : "the main road next to the building will be close down for a week due to pothole filling",
         "messageType" : "warning",
-		"messageComments" : "Comments"
+		"messageComments" : [4,5,6]
     },
 	{
         "messageId" : 4,
@@ -33,7 +33,7 @@
         "messageSubject" : "Information about internet maintanance",
         "messageBody" : "internet will be down for 2 hours tommorow for upgrading",
         "messageType" : "build",
-		"messageComments" : "Comments"
+		"messageComments" : {}
     },
 	{
         "messageId" : 5,
@@ -42,6 +42,6 @@
         "messageSubject" : "Snow expected next week",
         "messageBody" : "snow is expcted next week so make sure you have salt and pepper",
         "messageType" : "warning",
-		"messageComments" : "Comments"
+		"messageComments" : {}
     }
 ]
