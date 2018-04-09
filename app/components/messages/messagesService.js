@@ -17,7 +17,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
         if (wasEverLoaded) {
             async.resolve();
         } else {
-            $http.get("app/components/messages/messages.json").then(function (response) {
+            $http.get("app/data/messages.json").then(function (response) {
                 messages.splice(0, messages.length)
                 for (var i = 0; i < response.data.length; i++) {
                     messages.push(new Message(
