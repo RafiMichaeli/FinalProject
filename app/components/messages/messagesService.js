@@ -2,7 +2,6 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
     var messages = [];
     var msgWasEverLoaded = false;
     var comments = [];
-    var comWasEverLoaded = false;
 
     function Message(messageId,
         messageCreatedBy,
@@ -16,51 +15,25 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
         this.messageCreatedAt = messageCreatedAt;
         this.messageSubject = messageSubject;
         this.messageBody = messageBody;
-        // if ()
         this.messageType = messageType;
-        this.messageComments = messageComments;
+        this.messageComments = [];
+        for (var i = 0; i < messageComments.length; ++i) {
+            this.messageComments.push(new Comment(
+                messageComments[i].commentCreateBy,
+                messageComments[i].commentCreatedAt,
+                messageComments[i].commentBody));
+        }
     }
 
-    function Comment(commentId,
-        commentCreateBy,
+    function Comment(commentCreateBy,
         commentCreatedAt,
-        commentBody,
-        messageId) {
-        this.commentId = commentId;
+        commentBody, ) {
         this.commentCreateBy = commentCreateBy;
         this.commentCreatedAt = commentCreatedAt;
         this.commentBody = commentBody;
     }
 
-    /* function load() {
-        var async = $q.defer();
-        if (comWasEverLoaded) {
-            async.resolve();
-        } else {
-            $http.get("app/data/comments.json").then(function (response) {
-                comments.splice(0, comments.length)
-                for (var i = 0; i < response.data.length; i++) {
-                    comments.push(new Comment(
-                        response.data[i].commentId,
-                        response.data[i].commentCreateBy,
-                        response.data[i].commentCreatedAt,
-                        response.data[i].commentBody));
-                }
-                comWasEverLoaded = true;
-                async.resolve();
-
-            }, function (response) {
-                // on failure
-                async.reject();
-            });
-        }
-
-        return async.promise;
-    } */
-
-
-
-    function load() {
+    function loadMessages() {
         var async = $q.defer();
         if (msgWasEverLoaded) {
             async.resolve();
@@ -101,21 +74,13 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
         messages.push(message);
     }
 
-
-    // function addCar(brand, model, year, km, testDate) {
-    //   var car = new Car(brand, model, year, km, testDate);
-    //   cars.push(car);
-
-
-
-
-    //function (getMessages) {
-
-    // }
+    function commentsForTest() {
+        return commentTest;
+    }
 
     return {
         createNewMessage: creatNewMessage,
         messages: messages,
-        load: load
+        loadMessages: loadMessages
     }
 })

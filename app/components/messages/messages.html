@@ -5,7 +5,7 @@
                 ng-model="searchMessages">
             <label for="filterBy">Filter By:</label>
             <select class="form-control m-2" id="filterBy" ng-model="filterMessages">
-                <option>No Filter</option>
+                <option value="">No Filter</option>
                 <option value="info">Information</option>
                 <option value="warning">Important</option>
                 <option value="build">Maintanance</option>
@@ -92,22 +92,20 @@
                         <div class="col">
                             <div class="row mx-auto">
                                 <span class="font-weight-bold">Comments:</span>
-                                <div class="row align-left">
+                                <div class="row align-left" ng-repeat="comment in message.messageComments">
                                     <i class="material-icons">person</i>
-                                    <div class="col card mx-auto float-left">
-                                        <span class="card-text">message textmessage textmessage textmessage textmessage textmessage textmessage textmessage
-                                            textmessage textmessage text message text message text message text message text
-                                            message text</span>
+                                    <div class="col card m-1 float-left">
+                                        <span class="card-text">{{comment.commentBody}}</span>
                                     </div>
                                     <button type="button" class="close font-weight-bold text-danger" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="col-lg-9 align-left">
-                                    <div class="input-group ">
+                                    <div class="input-group m-1">
                                         <input type="text" class="form-control" placeholder="Add new comment...">
                                         <span class="input-group-btn btn mx-auto">
-                                            <button class="btn btn-light border" type="button">Add</button>
+                                            <button class="btn btn-light border" type="button" ng-click="createComment">Add</button>
                                         </span>
                                     </div>
                                 </div>

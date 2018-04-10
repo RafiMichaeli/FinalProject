@@ -6,7 +6,16 @@
         "messageSubject" : "Information about Gas",
         "messageBody" : "gas price is going up by 10% next week",
         "messageType" : "info",
-		"messageComments" : [1,2]
+		"messageComments" : [{
+            "commentCreateBy" : "UserId",
+            "commentCreatedAt": "09-04-2018",
+            "commentBody": "Text of the comments Text of the comments Text of the comments Text of the comments"
+        },
+        {
+            "commentCreateBy" : "UserId",
+            "commentCreatedAt": "09-04-2018",
+            "commentBody": "2 2Text of the comments Text of the comments Text of the comments Text of the comments"
+        }]
     },
 	{
         "messageId" : 2,
@@ -15,7 +24,11 @@
         "messageSubject" : "Information about water",
         "messageBody" : "water price is going up 15% next week",
         "messageType" : "info",
-		"messageComments" : [3]
+		"messageComments" : [{
+            "commentCreateBy" : "UserId",
+            "commentCreatedAt": "09-04-2018",
+            "commentBody": "33333Text of the comments Text of the comments Text of the comments Text of the comments"
+        }]
     },
 	{
         "messageId" : 3,
@@ -24,7 +37,21 @@
         "messageSubject" : "Close Down Notice",
         "messageBody" : "the main road next to the building will be close down for a week due to pothole filling",
         "messageType" : "warning",
-		"messageComments" : [4,5,6]
+		"messageComments" : [{
+            "commentCreateBy" : "UserId",
+            "commentCreatedAt": "09-04-2018",
+            "commentBody": "Text o44444f the comments Text of the comments Text of the comments Text of the comments"
+        },
+        {
+            "commentCreateBy" : "UserId",
+            "commentCreatedAt": "09-04-2018",
+            "commentBody": "Text of the55555 comments Text of the comments Text of the comments Text of the comments"
+        },
+        {
+            "commentCreateBy" : "UserId",
+            "commentCreatedAt": "09-04-2018",
+            "commentBody": "Text of the comm66666666ents Text of the comments Text of the comments Text of the comments"
+        }]
     },
 	{
         "messageId" : 4,
@@ -33,7 +60,7 @@
         "messageSubject" : "Information about internet maintanance",
         "messageBody" : "internet will be down for 2 hours tommorow for upgrading",
         "messageType" : "build",
-		"messageComments" : {}
+		"messageComments" : []
     },
 	{
         "messageId" : 5,
@@ -42,6 +69,10 @@
         "messageSubject" : "Snow expected next week",
         "messageBody" : "snow is expcted next week so make sure you have salt and pepper",
         "messageType" : "warning",
-		"messageComments" : {}
+		"messageComments" : [{
+            "commentCreateBy" : "UserId",
+            "commentCreatedAt": "09-04-2018",
+            "commentBody": "Text 777777777t of the comments Text of the comments Text of the comments"
+        }]
     }
 ]
