@@ -38,18 +38,15 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
             async.resolve();
         } else {
             $http.get("app/data/comments.json").then(function (response) {
-                comments.splice(0, messages.length)
+                comments.splice(0, comments.length)
                 for (var i = 0; i < response.data.length; i++) {
-                    messages.push(new Message(
-                        response.data[i].messageId,
-                        response.data[i].messageCreatedBy,
-                        response.data[i].messageCreatedAt,
-                        response.data[i].messageSubject,
-                        response.data[i].messageBody,
-                        response.data[i].messageType,
-                        response.data[i].messageComments));
+                    comments.push(new Comment(
+                        response.data[i].commentId,
+                        response.data[i].commentCreateBy,
+                        response.data[i].commentCreatedAt,
+                        response.data[i].commentBody));
                 }
-                wasEverLoaded = true;
+                comWasEverLoaded = true;
                 async.resolve();
 
             }, function (response) {
