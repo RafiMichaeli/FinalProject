@@ -1,9 +1,10 @@
 mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messagesService) {
-    
-    $scope.commentsForTest = messagesService.commentsForTest;
+
     $scope.messages = [];
     $scope.comments = [];
     $scope.filterMessages = "";
+    $scope.commentBody = "";
+
     messagesService.loadMessages().then(function () {
         $scope.messages = messagesService.messages;
     });
@@ -13,6 +14,18 @@ mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messag
         $scope.newMessage = {};
         //$modalInstance.close();
     }
+
+    $scope.createComment = function (message, commentBody) {
+        messagesService.createNewComment(message, commentBody)
+        commentBody = "";
+    }
+
+    $scope.deleteComment = function (comment, messageComments) {
+        var index = messageComments.indexOf(comment);
+        messageComments.splice(index, 1);
+    }
+
+
     $scope.filterInMessages = function (messages) {
         if ((!$scope.searchMessages || messages.messageSubject.toLowerCase().includes($scope.searchMessages.toLowerCase())) &&
             ($scope.filterMessages == messages.messageType || $scope.filterMessages == 'No Filter' || !$scope.filterMessages)) {

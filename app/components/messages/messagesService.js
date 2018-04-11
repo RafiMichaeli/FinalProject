@@ -74,11 +74,21 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
         messages.push(message);
     }
 
-    function commentsForTest() {
-        return commentTest;
+    function createNewComment(message, commentBody) {
+        var comment = new Comment(
+            "currentUser",
+            "" + new Date(),
+            commentBody
+        );
+        message.messageComments.push(comment);
+    }
+
+    function deleteComment (messageComments, comment){
     }
 
     return {
+        deleteComment: deleteComment,
+        createNewComment: createNewComment,
         createNewMessage: creatNewMessage,
         messages: messages,
         loadMessages: loadMessages
