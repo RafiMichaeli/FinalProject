@@ -83,11 +83,11 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
         message.messageComments.push(comment);
     }
 
-    function deleteComment (messageComments, comment){
-    }
+   // function deleteComment (messageComments, comment){
+   // }
 
     return {
-        deleteComment: deleteComment,
+       // deleteComment: deleteComment,
         createNewComment: createNewComment,
         createNewMessage: creatNewMessage,
         messages: messages,
