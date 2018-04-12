@@ -8,4 +8,5 @@ mainHoaApp.config(function ($routeProvider) {
         .when("/home", {
             templateUrl: "/app/components/home/home.html"
         })
+        
 });
