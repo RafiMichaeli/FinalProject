@@ -20,9 +20,14 @@
                 <a class="nav-link" href="#">Voting</a>
             </li>
         </ul>
+        <ul>
+            <li>
+                <span>{{userToDisplay}}</span>
+            </li>
+        </ul>
         <ul class="navbar-nav">
             <li class="nav-item right-align">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal" ng-click="logout()">Logout</a>
             </li>
         </ul>
     </nav>

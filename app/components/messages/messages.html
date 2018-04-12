@@ -1,113 +1,115 @@
-<navbar-home-directive></navbar-home-directive>
-<div class="container bg-light" ng-controller="messagesCtrl">
-    <div class="row mx-auto form-inline form-group ">
-        <div class="col form-group m-2">
-            <input type="search" class="form-control w-50 m-2" name="" id="searchInMessages" placeholder="Search by title of message text"
-                ng-model="searchMessages">
-            <label for="filterBy">Filter By:</label>
-            <select class="form-control m-2" id="filterBy" ng-model="filterMessages">
-                <option value="">No Filter</option>
-                <option value="info">Information</option>
-                <option value="warning">Important</option>
-                <option value="build">Maintanance</option>
-            </select>
-            <label for="sortBy">Sort By:</label>
-            <label class="radio-inline">
-                <input class="m-2" type="radio" name="sortBy" ng-model="sortBy" value="'messageCreatedAt'">Date</label>
-            <label class="radio-inline">
-                <input class="m-2" type="radio" name="sortBy" ng-model="sortBy" value="'messageType'">Type</label>
+<div class="container">
+    <navbar-home-directive></navbar-home-directive>
+    <div class="bg-light" ng-controller="messagesCtrl">
+        <div class="row mx-auto form-inline form-group ">
+            <div class="col form-group m-2">
+                <input type="search" class="form-control w-50 m-2" name="" id="searchInMessages" placeholder="Search by title of message text"
+                    ng-model="searchMessages">
+                <label for="filterBy">Filter By:</label>
+                <select class="form-control m-2" id="filterBy" ng-model="filterMessages">
+                    <option value="">No Filter</option>
+                    <option value="info">Information</option>
+                    <option value="warning">Important</option>
+                    <option value="build">Maintanance</option>
+                </select>
+                <label for="sortBy">Sort By:</label>
+                <label class="radio-inline">
+                    <input class="m-2" type="radio" name="sortBy" ng-model="sortBy" value="'messageCreatedAt'">Date</label>
+                <label class="radio-inline">
+                    <input class="m-2" type="radio" name="sortBy" ng-model="sortBy" value="'messageType'">Type</label>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 mx-auto">
-            <!-- Button trigger modal of new message -->
-            <button class="btn border float-right border-0 bg-light font-weight-bold text-primary mr-4" data-toggle="modal" data-target="#newMessageModal">
-                <span>
-                    <u> New Message</u>
-                </span>
-            </button>
+        <div class="row">
+            <div class="col-12 mx-auto">
+                <!-- Button trigger modal of new message -->
+                <button class="btn border float-right border-0 bg-light font-weight-bold text-primary mr-4" data-toggle="modal" data-target="#newMessageModal">
+                    <span>
+                        <u> New Message</u>
+                    </span>
+                </button>
+            </div>
         </div>
-    </div>
-    <!-- Modal -->
-    <div class="modal fade" id="newMessageModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header float-left bg-light">
-                    <h4 class="modal-title" id="modelTitleId">Create new message</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form class="align-left">
-                        <div class="form-group">
-                            <label class="m-1" for="newMessageSubject">Subject:</label>
-                            <input class="form-control" type="text" name="" id="newMessageSubject" ng-model="newMessage.messageSubject" placeholder="Message Subject">
-                            <label class="m-1" for="newMessageBody">Body:</label>
-                            <textarea type="text" class="form-control" id="newMessageBody" ng-model="newMessage.messageBody" placeholder="Type your message here"></textarea>
-                            <label class="m-1" for="newMessageType">Type: </label>
-                            <select class="form-control w-50" id="newMessageType" ng-model="newMessage.messageType">
-                                <option value="">--Select Message Type--</option>
-                                <option value="info">Information</option>
-                                <option value="warning">Important</option>
-                                <option value="build">Maintanance</option>
-                            </select>
-                            <!--label for="imgLoad">Image Load: </label>
-                            <input type="file" name="" id="imgLoad" ng-model="imgLoad">
-                            <img src="{{imgLoad.path}}" alt="" srcset=""-->
+        <!-- Modal -->
+        <div class="modal fade" id="newMessageModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header float-left bg-light">
+                        <h4 class="modal-title" id="modelTitleId">Create new message</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="align-left">
+                            <div class="form-group">
+                                <label class="m-1" for="newMessageSubject">Subject:</label>
+                                <input class="form-control" type="text" name="" id="newMessageSubject" ng-model="newMessage.messageSubject" placeholder="Message Subject">
+                                <label class="m-1" for="newMessageBody">Body:</label>
+                                <textarea type="text" class="form-control" id="newMessageBody" ng-model="newMessage.messageBody" placeholder="Type your message here"></textarea>
+                                <label class="m-1" for="newMessageType">Type: </label>
+                                <select class="form-control w-50" id="newMessageType" ng-model="newMessage.messageType">
+                                    <option value="">--Select Message Type--</option>
+                                    <option value="info">Information</option>
+                                    <option value="warning">Important</option>
+                                    <option value="build">Maintanance</option>
+                                </select>
+                                <!--label for="imgLoad">Image Load: </label>
+                                        <input type="file" name="" id="imgLoad" ng-model="imgLoad">
+                                        <img src="{{imgLoad.path}}" alt="" srcset=""-->
+                            </div>
+                        </form>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" ng-click="createMessage()" data-dismiss="modal">Save</button>
                         </div>
-                    </form>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" ng-click="createMessage()" data-dismiss="modal">Save</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row m-3 p-3">
-        <div id="accordion">
-            <div class="card" ng-repeat="message in messages | orderBy: sortBy | filter: filterInMessages">
-                <div class="card-header" id="heading{{message.messageId}}">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{message.messageId}}" aria-expanded="false" aria-controls="collapse{{message.messageId}}">
-                            {{message.messageSubject}}
-                        </button>
-                        <span>{{message.messageCreatedAt}}</span>
-                        <i class="material-icons float-right text-primary">{{message.messageType}}</i>
-                    </h5>
-                </div>
-                <div id="collapse{{message.messageId}}" class="collapse show" aria-labelledby="heading{{message.messageId}}" data-parent="#accordion">
-                    <div class="card-body row">
-                        <div class="col float-left">
-                            <img class="rounded float-left" src="" alt="">
-                            <label class="font-weight-bold" for="messageDetails">Details:</label>
-                            <p id="messageDetails" class="">
-                                {{message.messageBody}}
-                            </p>
-                            <label class="font-weight-bold" for="messagePriorety">Type:</label>
-                            <span>{{message.messageType}}</span>
-                        </div>
-                        <div class="border">
-                        </div>
-                        <div class="col">
-                            <div class="row mx-auto">
-                                <span class="font-weight-bold">Comments:</span>
-                                <div class="row w-100 align-left" ng-repeat="comment in message.messageComments">
-                                    <i class="material-icons">person</i>
-                                    <div class="col card m-1">
-                                        <span class="card-text">{{comment.commentBody}}</span>
+        <div class="row m-3 p-3">
+            <div id="accordion">
+                <div class="card" ng-repeat="message in messages | orderBy: sortBy | filter: filterInMessages">
+                    <div class="card-header" id="heading{{message.messageId}}">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{message.messageId}}" aria-expanded="false" aria-controls="collapse{{message.messageId}}">
+                                {{message.messageSubject}}
+                            </button>
+                            <span>{{message.messageCreatedAt}}</span>
+                            <i class="material-icons float-right text-primary">{{message.messageType}}</i>
+                        </h5>
+                    </div>
+                    <div id="collapse{{message.messageId}}" class="collapse show" aria-labelledby="heading{{message.messageId}}" data-parent="#accordion">
+                        <div class="card-body row">
+                            <div class="col float-left">
+                                <img class="rounded float-left" src="" alt="">
+                                <label class="font-weight-bold" for="messageDetails">Details:</label>
+                                <p id="messageDetails" class="">
+                                    {{message.messageBody}}
+                                </p>
+                                <label class="font-weight-bold" for="messagePriorety">Type:</label>
+                                <span>{{message.messageType}}</span>
+                            </div>
+                            <div class="border">
+                            </div>
+                            <div class="col">
+                                <div class="row mx-auto">
+                                    <span class="font-weight-bold">Comments:</span>
+                                    <div class="row w-100 align-left" ng-repeat="comment in message.messageComments">
+                                        <i class="material-icons">person</i>
+                                        <div class="col card m-1">
+                                            <span class="card-text">{{comment.commentBody}}</span>
+                                        </div>
+                                        <button type="button" class="close font-weight-bold text-danger" data-dismiss="modal" aria-label="Delete" ng-click="deleteComment(comment, message.messageComments)">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
                                     </div>
-                                    <button type="button" class="close font-weight-bold text-danger" data-dismiss="modal" aria-label="Delete" ng-click="deleteComment(comment, message.messageComments)">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="col-lg-9 align-left">
-                                    <div class="input-group m-1">
-                                        <input type="text" class="form-control" placeholder="Add new comment..." ng-model="message.draftComment">
-                                        <span class="input-group-btn btn mx-auto">
-                                            <button class="btn btn-light border" type="button" ng-click="createComment(message)">Add</button>
-                                        </span>
+                                    <div class="col-lg-9 align-left">
+                                        <div class="input-group m-1">
+                                            <input type="text" class="form-control" placeholder="Add new comment..." ng-model="message.draftComment">
+                                            <span class="input-group-btn btn mx-auto">
+                                                <button class="btn btn-light border" type="button" ng-click="createComment(message)">Add</button>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -117,3 +119,5 @@
             </div>
         </div>
     </div>
+    <footer-directive></footer-directive>
+</div>
