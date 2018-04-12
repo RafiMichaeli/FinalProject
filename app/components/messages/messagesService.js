@@ -65,7 +65,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
     function creatNewMessage(newMessage) {
         var message = new Message(
             messages.length + 1,
-            "currentUser",
+            currentUser,
             "" + new Date(),
             newMessage.messageSubject,
             newMessage.messageBody,
@@ -76,7 +76,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
 
     function createNewComment(message, commentBody) {
         var comment = new Comment(
-            "currentUser",
+            currentUser.userFirstName,
             "" + new Date(),
             commentBody
         );

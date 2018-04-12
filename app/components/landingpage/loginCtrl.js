@@ -7,7 +7,7 @@ mainHoaApp.controller('loginCtrl', function ($scope, $http, $location, activeUse
     $scope.login = function () {
         // TODO: Here you should disable the login button until there is a response from the service
 
-        activeUserService.login($scope.loginEmail, $scope.loginPass).then(function(successLogin) {
+        activeUserService.login($scope.loginEmail, $scope.loginPass).then(function (successLogin) {
             if (successLogin) {
                 document.getElementsByClassName("modal-backdrop fade show")[0].className = "modal fade";
                 $location.path("/home");
@@ -17,6 +17,5 @@ mainHoaApp.controller('loginCtrl', function ($scope, $http, $location, activeUse
             }
         })
     }
-
 
 })

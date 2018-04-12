@@ -5,24 +5,24 @@
                 <a class="navbar-brand" href="#">HOA System</a>
             </li>
             <li>
-                <a class="nav-link" href="#">Dashboard</a>
+                <a class="nav-link" ng-class="" href="#">Dashboard</a>
             </li>
             <li>
-                <a class="nav-link" href="#">Tenants</a>
+                <a class="nav-link" ng-class="" href="#">Tenants</a>
             </li>
             <li>
-                <a class="nav-link active" href="#">Messages</a>
+                <a class="nav-link" ng-class="active" href="#!/messages">Messages</a>
             </li>
             <li>
-                <a class="nav-link" href="#">Issues</a>
+                <a class="nav-link" ng-class="" href="#">Issues</a>
             </li>
             <li>
-                <a class="nav-link" href="#">Voting</a>
+                <a class="nav-link" ng-class="" href="#">Voting</a>
             </li>
         </ul>
-        <ul>
+        <ul class="navbar-nav">
             <li>
-                <span>{{userToDisplay}}</span>
+                <a class="nav-link active">{{userToDisplay}}</a>
             </li>
         </ul>
         <ul class="navbar-nav">

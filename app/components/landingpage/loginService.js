@@ -12,7 +12,6 @@ mainHoaApp.factory("activeUserService", function ($http, $log, $q) {
 
     var activeUser = null;
 
-
     // This function will update the active user property with the logged in user
     // Will return true in case of successfull login. otherwise return false
     function login(loginEmail, loginPass) {

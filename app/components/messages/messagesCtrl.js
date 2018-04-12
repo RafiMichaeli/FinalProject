@@ -1,9 +1,10 @@
-mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messagesService) {
+mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messagesService, activeUserService) {
 
     $scope.messages = [];
     $scope.comments = [];
     $scope.filterMessages = "";
     $scope.commentBody = "";
+    $scope.currentUser = activeUserService.getUser();
 
     messagesService.loadMessages().then(function () {
         $scope.messages = messagesService.messages;
