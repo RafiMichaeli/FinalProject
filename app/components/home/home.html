@@ -1,26 +1,4 @@
-<!doctype html>
-<html lang="en" ng-app="mainHoaApp">
-
-<head>
-    <title>HOA System - Main Page After Login</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="app\mainHoaApp.js"></script>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-</head>
-
+<nvbar-home-directive></nvbar-home-directive>
 <body class="container">
   navbar area directive
     <main>
@@ -29,65 +7,8 @@
                 {{5+5}}
             </p> main arae</div>
 
-        <!-- The Modal -->
-        <div class="modal fade" id="loginModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <!-- Modal Header -->
-                    <div class="modal-header bg-dark">
-                        <h4 class="modal-title ceter-aligne text-light">Log In Details</h4>
-                        <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="" id="loginEmail" aria-describedby="helpId" placeholder="e-mail">
-                            <small id="helpId" class="form-text text-muted"></small>
-                            <input type="password" class="form-control" name="" id="loginPass" aria-describedby="helpId" placeholder="Password">
-                            <small id="helpId" class="form-text text-muted"></small>
-                        </div>
-                        <!-- Modal footer -->
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondery" data-dismiss="modal">Cancel</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="afterLogin.html">Login</button>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
     </main>
-    <footer class=" pt-4 mt-4 bg-dark">
-        <div class="container-fluid text-center text-md-left">
-            <div class="row">
-                <div class="col-md-6 text-light">
-                    <h5 class="text-uppercase">HOA System</h5>
-                    <p>this is the teext area to write about the system.</p>
-                </div>
-                <div class="col-md-6 text-light">
-                    <h5 class="text-uppercase">Links</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Link 1</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 2</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 3</a>
-                        </li>
-                        <li>
-                            <a href="#!">Link 4</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright py-3 text-center text-light">© 2018 Copyright:
-            <a href="#"> HOASystemsAreGreat.com </a>
-        </div>
-    </footer>
+    <footer-directive></footer-directive>
 </body>
 
 </html>

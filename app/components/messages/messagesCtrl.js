@@ -15,9 +15,9 @@ mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messag
         //$modalInstance.close();
     }
 
-    $scope.createComment = function (message, commentBody) {
-        messagesService.createNewComment(message, commentBody)
-        commentBody = "";
+    $scope.createComment = function (message) {
+        messagesService.createNewComment(message, message.draftComment)
+        message.draftComment = "";
     }
 
     $scope.deleteComment = function (comment, messageComments) {

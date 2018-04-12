@@ -1,0 +1,18 @@
+[
+    {
+        "userId": 1,
+        "userFirstName": "Rafi",
+        "userLastName": "Michaeli",
+        "userEmail": "rafi@rafi.com",
+        "userApt" : "2A",
+        "isManager": true
+    },
+    {
+        "userId": 2,
+        "userFirstName": "Dan",
+        "userLastName": "Ban",
+        "userEmail": "dan@dan.com",
+        "userApt" : "3A",
+        "isManager": false
+    }
+]

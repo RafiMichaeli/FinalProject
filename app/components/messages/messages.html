@@ -1,4 +1,5 @@
-<div class="bg-light" ng-controller="messagesCtrl">
+<navbar-home-directive></navbar-home-directive>
+<div class="container bg-light" ng-controller="messagesCtrl">
     <div class="row mx-auto form-inline form-group ">
         <div class="col form-group m-2">
             <input type="search" class="form-control w-50 m-2" name="" id="searchInMessages" placeholder="Search by title of message text"
@@ -103,9 +104,9 @@
                                 </div>
                                 <div class="col-lg-9 align-left">
                                     <div class="input-group m-1">
-                                        <input type="text" class="form-control" placeholder="Add new comment..." ng-model="commentBody">
+                                        <input type="text" class="form-control" placeholder="Add new comment..." ng-model="message.draftComment">
                                         <span class="input-group-btn btn mx-auto">
-                                            <button class="btn btn-light border" type="button" ng-click="createComment(message, commentBody)">Add</button>
+                                            <button class="btn btn-light border" type="button" ng-click="createComment(message)">Add</button>
                                         </span>
                                     </div>
                                 </div>

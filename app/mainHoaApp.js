@@ -1,22 +1,8 @@
-var mainHoaApp = angular.module("mainHoaApp", ['ngRoute'])
+var mainHoaApp = angular.module('mainHoaApp', ['ngRoute'])
 
-mainHoaApp.config(function ($routeProvider, $locationProvider) {
+mainHoaApp.config(function ($routeProvider) {
     $routeProvider
-        .when("/home", {
-            templateUrl: "index.html",
-            controller: "mainHoaCtrl"
-       // }).when("/landingPage", {
-         //   templateUrl: "index.html",
-           // controller: "landingPageCtrl"
-        }).when("/messages", {
-            templateUrl: "app/components/messages/messages.html",
-            controller: "messagesCtrl"
-            //  }).when("/movies/:movieId",{
-            //    templateUrl: 'movieDetail.html',
-            //   controller: 'movieDetailCtrl'
-        }).otherwise({
-            redirecTo: "/"
+        .when("/", {
+            templateUrl: "app/components/landingpage/landingpage.html"
         })
-    //$locationProvider.html5Mode(true);
-    // $locationProvider.hashPrefix('*');
 });
