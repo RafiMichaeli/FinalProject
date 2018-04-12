@@ -1,3 +1,10 @@
-mainHoaApp.controller('loginCtrl', function($scope, $http, loginService){
+mainHoaApp.controller('loginCtrl', function ($scope, $http, activeUserService) {
+
+    $scope.invalidCredentails = false;
+
+    function loginManager() {
+
+    }
+
 
 })

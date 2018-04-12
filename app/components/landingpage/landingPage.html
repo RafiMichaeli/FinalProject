@@ -1,6 +1,5 @@
 <div class="container">
     <navbar-landing-directive></navbar-landing-directive>
-
     <div class="jumbotron jumbotron-fluid">
         <div class="container text-center">
             <div class="col-6 mx-auto">
@@ -74,6 +73,8 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal" ng-click="loginManager()">Manager</button>
+                        <button type="button" class="btn btn-warning" data-dismiss="modal" ng-click="loginUser()">User</button>
                         <button type="button" class="btn btn-secondery" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="login()">Login</button>
                     </div>
