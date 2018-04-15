@@ -9,14 +9,16 @@ mainHoaApp.config(function ($routeProvider) {
             templateUrl: "/app/components/home/home.html",
             controller: 'homeCtrl'
         })
-        .when ("/messages", {
+        .when("/messages", {
             templateUrl: "app/components/messages/messages.html",
             controller: 'messagesCtrl'
         })
-        .when ("/tenants", {
+        .when("/tenants", {
             templateUrl: "app/components/tenants/tenants.html",
-           // controller: "tenantsCtrl"
-        }
-
-        )
+            // controller: "tenantsCtrl"
+        })
+        .otherwise({
+            templateUrl: "/app/components/home/home.html",
+            controller: 'homeCtrl'
+        });
 });
