@@ -1,0 +1,46 @@
+<div class="container" ng-controller="tenantsCtrl">
+
+    <navbar-home-directive></navbar-home-directive>
+    <div>
+        <h1>
+            Tenetas {{10+12}}
+        </h1>
+
+        <div id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Rafi Michaeli
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col mx-auto">
+                                <img src="app\assets\img\placeholdersq.PNG" class="img-fluid rounded float-left" alt="">
+                                <ul>
+                                    <li>
+                                        <span>Name Name</span>
+                                    </li>
+                                    <li>
+                                        <span>Email: email@email.com</span>
+                                    </li>
+                                    <li>
+                                        <span>Apartment: 2A</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <button type="button" class="btn btn-light border">Update</button>
+                                <button type="button" class="btn btn-danger border">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer-directive></footer-directive>
+
+    </div>

@@ -65,7 +65,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q, activeUserServi
     function creatNewMessage(newMessage) {
         var message = new Message(
             messages.length + 1,
-            currentUser,
+            activeUserService.getUser().userId,
             "" + new Date(),
             newMessage.messageSubject,
             newMessage.messageBody,
