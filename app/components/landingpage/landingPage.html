@@ -9,11 +9,10 @@
                     Eum te detraxit convenire.
                 </p>
                 <hr class="my-2">
-                <p>
-                    <a name="signUp" id="" class="btn btn-primary" href="#" role="button">Sign Up</a>
-                </p>
-                <p>{{2+2}}</p>
-
+                <span>
+                    <!-- Button trigger signup modal -->
+                    <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#signUp">Sign Up</button>
+                </span>
                 <p class="lead"></p>
             </div>
         </div>
@@ -54,16 +53,64 @@
         </div>
     </div>
 
-    <!-- The Modal -->
+    <!-- signup Modal -->
+    <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h4 class="modal-title text-light" id="modelTitleId">Create a Committee memeber account </h4>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body bg-light">
+                    <div class="container-fluid">
+                        <div class="form-group mx-auro">
+                            <label class="bold" for="">First Name:</label>
+                            <input type="text" class="form-control" name="" id="" placeholder="First Name">
+                            <label for="">Last Name:</label>
+                            <input type="text" class="form-control" name="" id="" placeholder="Last Name">
+                            <label for="">Email:</label>
+                            <input type="email" class="form-control" name="" id="" placeholder="e-mail">
+                            <label for="">Choose a password:</label>
+                            <input type="password" class="form-control" name="" id="" placeholder="Choose a password">
+                            <label for="">Building / Community Name:</label>
+                            <input type="text" class="form-control" name="" id="" placeholder="Building / Community Name">
+                            <label for="">Street Address:</label>
+                            <input type="text" class="form-control" name="" id="" placeholder="Address">
+                            <label for="">City:</label>
+                            <input type="text" class="form-control" name="" id="" placeholder="City">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#exampleModal').on('show.bs.modal', event => {
+            var button = $(event.relatedTarget);
+            var modal = $(this);
+            // Use above variables to manipulate the DOM
+
+        });
+    </script>
+
+
+    <!-- Login Modal -->
     <div class="modal fade" id="loginModal" ng-controller="loginCtrl">
         <div class="modal-dialog">
             <div class="modal-content">
-                <!-- Modal Header -->
+                <!-- login Header -->
                 <div class="modal-header bg-dark">
                     <h4 class="modal-title ceter-aligne text-light">Log In:</h4>
                     <button type="button" class="close text-light" data-dismiss="modal">&times;</button>
                 </div>
-                <!-- Modal body -->
+                <!-- login body -->
                 <div class="modal-body">
                     <div class="form-group">
                         <input type="email" class="form-control" name="" id="loginEmail" aria-describedby="helpId" placeholder="e-mail" ng-model="loginEmail">
@@ -71,14 +118,13 @@
                         <input type="password" class="form-control" name="" id="loginPass" aria-describedby="helpId" placeholder="Password" ng-model="loginPass">
                         <small id="helpId" class="form-text text-muted"></small>
                     </div>
-                    <!-- Modal footer -->
+                    <!-- login footer -->
                     <div class="alert alert-danger row" ng-show="invalidCredentails">
                         <strong>Error!</strong> Wrong email or password.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondery" data-dismiss="modal">Cancel</button>
                         <button type="button" class="btn btn-primary" ng-click="login()">Login</button>
-
                     </div>
                 </div>
             </div>
