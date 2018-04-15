@@ -5,7 +5,7 @@
         "userLastName": "Michaeli",
         "userEmail": "rafi@rafi.com",
         "userPwd": "123",
-        "userApt" : "2A",
+        "userApt": "2A",
         "isManager": true,
         "userData": "JSON of user Data"
     },
@@ -15,7 +15,7 @@
         "userLastName": "Ban",
         "userEmail": "dan@dan.com",
         "userPwd": "456",
-        "userApt" : "3A",
+        "userApt": "3A",
         "isManager": false,
         "userData": "JSON of user Data"
     }
