@@ -1,4 +1,4 @@
-mainHoaApp.factory('messagesService', function ($log, $http, $q) {
+mainHoaApp.factory('messagesService', function ($log, $http, $q, activeUserService) {
     var messages = [];
     var msgWasEverLoaded = false;
     var comments = [];
@@ -76,7 +76,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q) {
 
     function createNewComment(message, commentBody) {
         var comment = new Comment(
-            currentUser.userFirstName,
+            activeUserService.getUser().userId,
             "" + new Date(),
             commentBody
         );
