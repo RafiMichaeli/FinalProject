@@ -2,10 +2,10 @@
     <nav ng-controller="navbarCtrl" class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav mr-auto">
             <li>
-                <a class="navbar-brand" href="#">HOA System</a>
+                <a class="navbar-brand" href="#!/home">HOA System</a>
             </li>
             <li>
-                <a class="nav-link" ng-class="" href="#">Dashboard</a>
+                <a class="nav-link" ng-class="" href="#!/home">Dashboard</a>
             </li>
             <li>
                 <a class="nav-link" ng-class="" href="#!/tenants">Tenants</a>
@@ -14,20 +14,18 @@
                 <a class="nav-link" ng-class="active" href="#!/messages">Messages</a>
             </li>
             <li>
-                <a class="nav-link" ng-class="" href="#">Issues</a>
+                <a class="nav-link" ng-class="" href="#!/issues">Issues</a>
             </li>
             <li>
-                <a class="nav-link" ng-class="" href="#">Voting</a>
+                <a class="nav-link" ng-class="" href="#!/voting">Voting</a>
             </li>
         </ul>
         <ul class="navbar-nav">
             <li>
-                <a class="nav-link active">Hello {{currentUser.userFirstName}}</a>
+                <a class="nav-link active"> Hello <span class="text-uppercase font-weight-bold">{{currentUser.userFirstName}}<i class="material-icons">face</i></span></a>
             </li>
-        </ul>
-        <ul class="navbar-nav">
             <li class="nav-item right-align">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#logoutModal" ng-click="logout()">Logout</a>
+                <a class="nav-link" href="#" ng-click="logout()">Logout</a>
             </li>
         </ul>
     </nav>
