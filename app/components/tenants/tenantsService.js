@@ -48,5 +48,8 @@ mainHoaApp.factory('tenantsService', function ($log, $http, $q, activeUserServic
                 async.reject();
             });
         }
+    } return{
+        tenants: tenants,
+       // createTenant: createTenant,
     }
 })
