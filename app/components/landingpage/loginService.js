@@ -1,4 +1,5 @@
 mainHoaApp.factory("activeUserService", function ($http, $log, $q) {
+
     function User(plainUser) {
         this.userId = plainUser.userId;
         this.userFirstName = plainUser.userFirstName;
@@ -50,6 +51,6 @@ mainHoaApp.factory("activeUserService", function ($http, $log, $q) {
         login: login,
         getUser: getUser,
         isLoggedIn: isLoggedIn,
-        logout: logout
+        logout: logout,
     }
 })

@@ -21,6 +21,10 @@ mainHoaApp.config(function ($routeProvider) {
             templateUrl: "app/components/voting/voting.html"
            // controller: 
         })
+        .when("/issues", {
+            templateUrl: "app/components/issues/issues.html"
+           // controller: 
+        })
         .otherwise({
             templateUrl: "/app/components/home/home.html",
             controller: 'homeCtrl'

@@ -1,18 +1,18 @@
 [
     {
         "messageId" : 1,
-        "messageCreatedBy" : "user@email.com",
+        "messageCreatedBy" : "rafi@rafi.com",
         "messageCreatedAt" : "03-04-2018",
         "messageSubject" : "Information about Gas",
         "messageBody" : "gas price is going up by 10% next week",
         "messageType" : "info",
 		"messageComments" : [{
-            "commentCreateBy" : "UserId",
+            "commentCreateBy" : 1,
             "commentCreatedAt": "09-04-2018",
             "commentBody": "Text of the comments Text of the comments Text of the comments Text of the comments"
         },
         {
-            "commentCreateBy" : "UserId",
+            "commentCreateBy" : 2,
             "commentCreatedAt": "09-04-2018",
             "commentBody": "2 2Text of the comments Text of the comments Text of the comments Text of the comments"
         }]
@@ -32,7 +32,7 @@
     },
 	{
         "messageId" : 3,
-        "messageCreatedBy" : "user@email.com",
+        "messageCreatedBy" : "rafi@rafi.com",
         "messageCreatedAt" : "04-02-2018",
         "messageSubject" : "Close Down Notice",
         "messageBody" : "the main road next to the building will be close down for a week due to pothole filling",

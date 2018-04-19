@@ -96,6 +96,7 @@
                                     <span class="font-weight-bold">Comments:</span>
                                     <div class="row w-100 align-left" ng-repeat="comment in message.messageComments">
                                         <i class="material-icons">person</i>
+                                        <span>{{currentUser.userFirstName}}</span>
                                         <div class="col card m-1">
                                             <span class="card-text">{{comment.commentBody}}</span>
                                         </div>
