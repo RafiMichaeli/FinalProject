@@ -5,5 +5,8 @@ mainHoaApp.controller("navbarCtrl", function ($scope, $http, $location, activeUs
     $scope.logout = function () {
         activeUserService.logout();
     }
+    $scope.isActive = function (viewLocation) {
+        return viewLocation === $location.path();
+    };
 
 })
