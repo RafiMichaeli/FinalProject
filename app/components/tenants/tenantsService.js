@@ -64,12 +64,16 @@ mainHoaApp.factory('tenantsService', function ($log, $http, $q, activeUserServic
         );
         tenants.push(tenant);
     }
+    
+    function updateTenant(tenant) {
+
+    }
 
     return {
         tenants: tenants,
         loadTenants: loadTenants,
-        createNewTenant: createNewTenant
-        // createTenant: createTenant,
+        createNewTenant: createNewTenant,
+        updateTenant: updateTenant
     }
 
 
