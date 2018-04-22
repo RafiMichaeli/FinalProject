@@ -1,6 +1,6 @@
 <div class="container" ng-controller="votingCtrl">
     <navbar-home-directive></navbar-home-directive>
-{{10+30}}
+    {{10+30}}
 
     <div class="row">
         <div class="row float-right">
@@ -28,21 +28,23 @@
                 <div class="modal-body">
                     <form class="align-left">
                         <div class="form-group">
-                            <label class="bold" for="firstName">Title:</label>
-                            <input type="text" class="form-control" name="" id="title" placeholder="Title" ng-model="newVoting.votingTitle">
+                            <label class="bold" for="votingTitle">Title:</label>
+                            <input type="text" class="form-control" name="" id="votingTitle" placeholder="Title" ng-model="newVoting.votingTitle">
                             <label for="title">Details:</label>
-                            <input type="textarea" class="form-control" name="" id="lastName" placeholder="Last Name" ng-model="newTenant.userLastName">
-                            <label for="eMail">Email:</label>
-                            <input type="email" class="form-control" name="" id="eMail" placeholder="e-mail" ng-model="newTenant.userEmail">
-                            <label for="isMember"> Is Committee member:</label>
-                            <input type="checkbox" class="form-control" name="" id="isMember" value="checkedValue" ng-model="newTenant.isManager">
-                            <label for="apt">Apt:</label>
-                            <input type="text" class="form-control" name="" id="apt" placeholder="Apt" ng-model="newTenant.userApt">
+                            <input type="textarea" class="form-control" name="" id="lastName" placeholder="Describe the issue you want voting on" ng-model="newVoting.votingDetails">
+                            <label for="votingOptions">Options:</label>
+                            <input type="text" class="form-control" name="" id="votingOptions" placeholder="option 1" ng-model="newVoting.votingOption1">
+                            <input type="text" class="form-control" name="" id="votingOptions" placeholder="option 2" ng-model="newVoting.votingOption2">
+                            <button class="form-text bg-light border-0 font-weight-bold text-primary mr-4">
+                                <span>+ add option</span>
+
+                            </button>
+                            <label for="isMember"> Voting End date:</label>
+                            <input type="date" class="form-control" name="" id="isMember" value="checkedValue" ng-model="newTenant.isManager">
                         </div>
                     </form>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" ng-click="creatTenant()" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-primary" ng-click="creatTenant()" data-dismiss="modal">Create</button>
                     </div>
                 </div>
             </div>
@@ -53,7 +55,7 @@
         <div class="col">
             <h4>Active Votings</h4>
             <div id="accordion">
-                <div class="card" >
+                <div class="card">
                     <div class="card-header" id="heading{{userId}}">
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{userId}}" aria-expanded="true" aria-controls="collapse{{userId}}">
