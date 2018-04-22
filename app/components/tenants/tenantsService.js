@@ -64,9 +64,9 @@ mainHoaApp.factory('tenantsService', function ($log, $http, $q, activeUserServic
         );
         tenants.push(tenant);
     }
-    
-    function updateTenant(tenant) {
 
+    function updateTenant(tenant, indexOf) {
+        tenant[indexOf] = tenant
     }
 
     return {

@@ -1,6 +1,6 @@
 [
     {
-        "userId": "1",
+        "userId": 1,
         "userFirstName": "Rafi",
         "userLastName": "Michaeli",
         "userEmail": "rafi@rafi.com",
@@ -10,7 +10,7 @@
         "userData": "JSON of user Data"
     },
     {
-        "userId": "2",
+        "userId": 2,
         "userFirstName": "Dan",
         "userLastName": "Ban",
         "userEmail": "dan@dan.com",

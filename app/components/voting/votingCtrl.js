@@ -1,4 +1,11 @@
-mainHoaApp.controller("votingCtrl", function ($scope, $http, $location, messagesService, activeUserService, tenantsService) {
+mainHoaApp.controller("votingCtrl", function ($scope, $http, $location, activeUserService, tenantsService, votingService) {
 
-   $scope.user =  activeUserService.getUser();
+    $scope.votings = votingService.votings;
+    
+    // $scope.votingOptions = [{optionValue, ""} { optionValue, ""}] //
+
+    $scope.creatVoting = function () {
+        votingService.creatNewVoting($scope.newVoting);
+        $scope.newVoting = {};
+    }
 })

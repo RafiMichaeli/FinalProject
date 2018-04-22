@@ -1,6 +1,6 @@
 <div class="container" ng-controller="votingCtrl">
     <navbar-home-directive></navbar-home-directive>
-    {{10+30}}
+    {{votings.voting}}
 
     <div class="row">
         <div class="row float-right">
@@ -30,21 +30,19 @@
                         <div class="form-group">
                             <label class="bold" for="votingTitle">Title:</label>
                             <input type="text" class="form-control" name="" id="votingTitle" placeholder="Title" ng-model="newVoting.votingTitle">
-                            <label for="title">Details:</label>
-                            <input type="textarea" class="form-control" name="" id="lastName" placeholder="Describe the issue you want voting on" ng-model="newVoting.votingDetails">
+                            <label for="votingDetails">Details:</label>
+                            <input type="textarea" class="form-control" name="" id="votingDetails" placeholder="Describe the issue you want voting on" ng-model="newVoting.votingDetails">
                             <label for="votingOptions">Options:</label>
-                            <input type="text" class="form-control" name="" id="votingOptions" placeholder="option 1" ng-model="newVoting.votingOption1">
-                            <input type="text" class="form-control" name="" id="votingOptions" placeholder="option 2" ng-model="newVoting.votingOption2">
-                            <button class="form-text bg-light border-0 font-weight-bold text-primary mr-4">
+                            <input type="text" class="form-control" name="" id="votingOptions" placeholder="option" ng-model="newVoting.votingOption">
+                            <button class="form-text bg-light border-0 font-weight-bold text-primary mr-4" ng-click="addOption()">
                                 <span>+ add option</span>
-
                             </button>
-                            <label for="isMember"> Voting End date:</label>
-                            <input type="date" class="form-control" name="" id="isMember" value="checkedValue" ng-model="newTenant.isManager">
+                            <label for="votingCloseDate"> Voting End date:</label>
+                            <input type="date" class="form-control" name="" id="votingCloseDate" ng-model="newVoting.votingCloseDate">
                         </div>
                     </form>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" ng-click="creatTenant()" data-dismiss="modal">Create</button>
+                        <button type="button" class="btn btn-primary" ng-click="creatVoting()" data-dismiss="modal">Create</button>
                     </div>
                 </div>
             </div>
