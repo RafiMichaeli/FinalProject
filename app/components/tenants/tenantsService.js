@@ -5,7 +5,7 @@ mainHoaApp.factory('tenantsService', function ($log, $http, $q, activeUserServic
         dont load user and give error that u r not a manager.
     } */
 
-    var users = [];
+    var tenants = [];
     var wasEverLoaded = false;
 
     function Tenant(userId,
@@ -30,9 +30,9 @@ mainHoaApp.factory('tenantsService', function ($log, $http, $q, activeUserServic
             async.resolve();
         } else {
             $http.get("app/data/users.json").then(function (response) {
-                messages.splice(0, messages.length)
+                tenants.splice(0, tenants.length)
                 for (var i = 0; i < response.data.length; i++) {
-                    messages.push(new Tenant(
+                    tenants.push(new Tenant(
                         response.data[i].userId,
                         response.data[i].userFirstName,
                         response.data[i].userLastName,
@@ -48,8 +48,9 @@ mainHoaApp.factory('tenantsService', function ($log, $http, $q, activeUserServic
                 async.reject();
             });
         }
-    } return{
+    } return {
         tenants: tenants,
-       // createTenant: createTenant,
+        loadTenants: loadTenants
+        // createTenant: createTenant,
     }
 })
