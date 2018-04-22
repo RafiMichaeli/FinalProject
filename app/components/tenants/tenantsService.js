@@ -58,8 +58,10 @@ mainHoaApp.factory('tenantsService', function ($log, $http, $q, activeUserServic
             newTenant.userFirstName,
             newTenant.userLastName,
             newTenant.userEmail,
+            newTenant.userPwd,
             newTenant.userApt,
-            newTenant.isManager);
+            newTenant.isManager
+        );
         tenants.push(tenant);
     }
 

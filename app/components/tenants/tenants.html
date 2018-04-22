@@ -55,7 +55,7 @@
             <div class="card-header" id="heading{{userId}}">
                 <h5 class="mb-0">
                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{userId}}" aria-expanded="true" aria-controls="collapse{{userId}}">
-                        {{tenant.userFirstName + " " + tenant.userlastName}}
+                        <span>{{tenant.userFirstName}}</span> <span>{{tenant.userLastName}}</span>
                         <span>
                             <i class="btn material-icons" ng-show="{{tenant.isManager}}">card_membership</i>
                             <!--span>Comittee memeber</span-->
