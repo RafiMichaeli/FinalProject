@@ -1,10 +1,8 @@
 <div class="container" ng-controller="tenantsCtrl">
-
     <navbar-home-directive></navbar-home-directive>
     <div>
-        <div class="row form-inline form-group mx-auto">
-            <input type="search" class="form-control w-100 m-2" name="" id="searchInTenants" placeholder="Search by tenant name"
-                ng-model="searchTenants">
+        <div class="row form-inline mx-auto">
+            <input type="search" class="form-control w-100 m-2" name="" id="searchInTenants" placeholder="Search by tenant name" ng-model="searchTenants">
         </div>
     </div>
     <div class="row">
@@ -17,14 +15,49 @@
             </button>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="newTenantModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header float-left bg-dark">
+                    <h4 class="modal-title text-light" id="modelTitleId">Create new Tenant</h4>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="align-left">
+                        <div class="form-group">
+                            <label class="bold" for="firstName">First Name:</label>
+                            <input type="text" class="form-control" name="" id="firstName" placeholder="First Name">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" class="form-control" name="" id="lastName" placeholder="Last Name">
+                            <label for="eMail">Email:</label>
+                            <input type="email" class="form-control" name="" id="eMail" placeholder="e-mail">
+                            <label for="isMember"> Is Committee member:</label>
+                            <input type="checkbox" class="form-control" name="" id="isMember" value="checkedValue">
+                            <label for="apt">Apt:</label>
+                            <input type="text" class="form-control" name="" id="apt" placeholder="Apt">
+                        </div>
+                    </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" ng-click="createMessage()" data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="accordion">
-        <div class="card" ng-repeat="tenant in tenants | orderBy: sortBy">
+        <div class="card" ng-repeat="tenant in tenants">
             <div class="card-header" id="heading{{userId}}">
                 <h5 class="mb-0">
                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{userId}}" aria-expanded="true" aria-controls="collapse{{userId}}">
                         {{tenant.userFirstName + " " + tenant.userlastName}}
                         <span>
-                            <i class="btn material-icons">card_membership</i>
+                            <i class="btn material-icons" ng-show="{{isManager}}">card_membership</i>
                             <!--span>Comittee memeber</span-->
                         </span>
                     </button>
