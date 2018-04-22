@@ -20,10 +20,10 @@ mainHoaApp.factory('tenantsService', function ($log, $http, $q, activeUserServic
         this.userFirstName = userFirstName;
         this.userLastName = userLastName;
         this.userEmail = userEmail;
+        this.userPwd = userPwd;
         this.userApt = userApt;
         this.isManager = isManager;
     }
-
     function loadTenants() {
         var async = $q.defer();
         if (wasEverLoaded) {
@@ -37,6 +37,7 @@ mainHoaApp.factory('tenantsService', function ($log, $http, $q, activeUserServic
                         response.data[i].userFirstName,
                         response.data[i].userLastName,
                         response.data[i].userEmail,
+                        response.data[i].userPwd,
                         response.data[i].userApt,
                         response.data[i].isManager));
                 }
@@ -48,9 +49,26 @@ mainHoaApp.factory('tenantsService', function ($log, $http, $q, activeUserServic
                 async.reject();
             });
         }
-    } return {
+
+    }
+
+    function createNewTenant(newTenant) {
+        var tenant = new Tenant(
+            tenants.length + 1,
+            newTenant.userFirstName,
+            newTenant.userLastName,
+            newTenant.userEmail,
+            newTenant.userApt,
+            newTenant.isManager);
+        tenants.push(tenant);
+    }
+
+    return {
         tenants: tenants,
-        loadTenants: loadTenants
+        loadTenants: loadTenants,
+        createNewTenant: createNewTenant
         // createTenant: createTenant,
     }
+
+
 })

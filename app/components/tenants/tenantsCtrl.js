@@ -6,6 +6,11 @@ mainHoaApp.controller("tenantsCtrl", function ($scope, $http, $location, message
 
     $scope.tenants = tenantsService.tenants;
 
+    $scope.creatTenant = function () {
+        tenantsService.createNewTenant($scope.newTenant);
+        $scope.newTenant = {};
+    }
+
 
     /*  tenantsService.loadTenants().then(function () {
         $scope.tenants = tenantsService.tenants;

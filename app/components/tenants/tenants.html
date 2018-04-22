@@ -30,20 +30,20 @@
                     <form class="align-left">
                         <div class="form-group">
                             <label class="bold" for="firstName">First Name:</label>
-                            <input type="text" class="form-control" name="" id="firstName" placeholder="First Name">
+                            <input type="text" class="form-control" name="" id="firstName" placeholder="First Name" ng-model="newTenant.userFirstName">
                             <label for="lastName">Last Name:</label>
-                            <input type="text" class="form-control" name="" id="lastName" placeholder="Last Name">
+                            <input type="text" class="form-control" name="" id="lastName" placeholder="Last Name" ng-model="newTenant.userLastName">
                             <label for="eMail">Email:</label>
-                            <input type="email" class="form-control" name="" id="eMail" placeholder="e-mail">
+                            <input type="email" class="form-control" name="" id="eMail" placeholder="e-mail" ng-model="newTenant.userEmail">
                             <label for="isMember"> Is Committee member:</label>
-                            <input type="checkbox" class="form-control" name="" id="isMember" value="checkedValue">
+                            <input type="checkbox" class="form-control" name="" id="isMember" value="checkedValue" ng-model="newTenant.isManager">
                             <label for="apt">Apt:</label>
-                            <input type="text" class="form-control" name="" id="apt" placeholder="Apt">
+                            <input type="text" class="form-control" name="" id="apt" placeholder="Apt" ng-model="newTenant.userApt">
                         </div>
                     </form>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" ng-click="createMessage()" data-dismiss="modal">Save</button>
+                        <button type="button" class="btn btn-primary" ng-click="creatTenant()" data-dismiss="modal">Save</button>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@
                     <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{userId}}" aria-expanded="true" aria-controls="collapse{{userId}}">
                         {{tenant.userFirstName + " " + tenant.userlastName}}
                         <span>
-                            <i class="btn material-icons" ng-show="{{isManager}}">card_membership</i>
+                            <i class="btn material-icons" ng-show="{{tenant.isManager}}">card_membership</i>
                             <!--span>Comittee memeber</span-->
                         </span>
                     </button>
@@ -69,13 +69,10 @@
                         <img src="app\assets\img\placeholdersq.PNG" class="img-fluid rounded float-left p-2" alt="">
                         <ul class="list-group ">
                             <li class="list-group-item border-0">
-                                <span>Name: Name</span>
+                                <span>Email: {{tenant.userEmail}}</span>
                             </li>
                             <li class="list-group-item border-0">
-                                <span>Email: email@email.com</span>
-                            </li>
-                            <li class="list-group-item border-0">
-                                <span>Apartment: 2A</span>
+                                <span>Apartment: {{tenant.userApt}}</span>
                             </li>
                         </ul>
                         <div class="ml-auto p-2">
