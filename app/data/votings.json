@@ -19,7 +19,18 @@
                 "optinoValue": "Orange"
             }
         ],
-        "votingCloseDate": "",
-        "votingVotes": ""
+        "votingCloseDate": "20-4-2018",
+        "votingVotes": [
+            {
+                "votedBy": 1,
+                "votedAt": "11-4-2018",
+                "voteOption": "Orange"
+            },
+            {
+                "votedBy": 2,
+                "votedAt": "12-4-2018",
+                "voteOption": "Green"
+            }
+        ]
     }
 ]

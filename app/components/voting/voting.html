@@ -58,9 +58,9 @@
                     <div class="card-header" id="heading{{userId}}">
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{userId}}" aria-expanded="true" aria-controls="collapse{{userId}}">
-                                <span>{{voting.votingTitle}}</span>
+                                <span>{{newVoting.votingTitle}}</span>
                                 <span>
-                                    <i class="material-icons">assignment_turned_in</i>
+                                    <i class="material-icons">assignment</i>
                                 </span>
                             </button>
                         </h5>
@@ -68,18 +68,18 @@
                     <div id="collapse{{userId}}" class="collapse show" aria-labelledby="heading{{userId}}" data-parent="#accordion">
                         <div class="card-body d-flex flex-column">
                             <div class="row">
-                                <ul class="list-group ">
-                                    <li>
-                                        <span>{{voting.votingDetails}}</span>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span>{{newVoting.votingDetails}}</span>
                                     </li>
-                                    <li>
-                                        <span>{{voting.votingOptions.optionValue}}</span>
+                                    <li class="list-group-item">
+                                        <span>{{newVoting.votingOptions.optionValue}}</span>
                                     </li>
-                                    <li>
-                                        <span>{{voting.votingCloseDate}}</span>
+                                    <li class="list-group-item">
+                                        <span>{{newVoting.votingCloseDate}}</span>
                                     </li>
-                                    <li>
-                                        <span>{{voting.votingVotes}}</span>
+                                    <li class="list-group-item">
+                                        <span>{{newVoting.votingVotes}}</span>
                                     </li>
                                 </ul>
                                 <div class="ml-auto p-2">
@@ -109,12 +109,17 @@
                     <div id="collapse{{userId}}" class="collapse show" aria-labelledby="heading{{userId}}" data-parent="#accordion">
                         <div class="card-body d-flex flex-column">
                             <div class="row">
-                                <ul class="list-group ">
-                                    <li class="list-group-item border-0">
-                                        <span>Email: {{tenant.userEmail}}</span>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <span class="font-weight-bold">Voting details: </span>
+                                        <span> {{voting.votingDetails}}</span>
                                     </li>
-                                    <li class="list-group-item border-0">
-                                        <span>Apartment: {{tenant.userApt}}</span>
+                                    <li class="list-group-item">
+                                        <span class="font-weight-bold">Vote closed on:</span>
+                                        <span>{{voting.votingCloseDate}}</span>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <span>Votings: {{voting.votingVotes}}</span>
                                     </li>
                                 </ul>
                                 <div class="ml-auto p-2">
