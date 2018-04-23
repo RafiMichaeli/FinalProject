@@ -42,5 +42,49 @@
                 "voteOption": "Yellow"
             }
         ]
+    },
+    {
+        "votingId": 2,
+        "votingCreatedBy": 1,
+        "votingCreatedAt": "10-4-2018",
+        "votingTitle": "What color should we paint the building",
+        "votingDetails": "You need to choose the color of the outside walls of the building",
+        "votingOptions": [
+            {
+                "optinoValue": "Yellow"
+            },
+            {
+                "optinoValue": "Black"
+            },
+            {
+                "optinoValue": "Green"
+            },
+            {
+                "optinoValue": "Orange"
+            }
+        ],
+        "votingCloseDate": "24-04-2018",
+        "votingVotes": [
+            {
+                "votedBy": 1,
+                "votedAt": "11-4-2018",
+                "voteOption": "Orange"
+            },
+            {
+                "votedBy": 2,
+                "votedAt": "12-4-2018",
+                "voteOption": "Green"
+            },
+            {
+                "votedBy": 3,
+                "votedAt": "12-4-2018",
+                "voteOption": "Green"
+            },
+            {
+                "votedBy": 4,
+                "votedAt": "12-4-2018",
+                "voteOption": "Yellow"
+            }
+        ]
     }
 ]

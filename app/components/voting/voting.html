@@ -54,7 +54,7 @@
         <div class="col-md-6 border border-top-0 border-bottom-0 border-left-0">
             <h4>Active Votings</h4>
             <div id="accordion">
-                <div class="card" ng-repeat="voting in votings">
+                <div class="card" ng-repeat="voting in votings ">
                     <div class="card-header" id="heading{{userId}}">
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{userId}}" aria-expanded="true" aria-controls="collapse{{userId}}">
@@ -70,16 +70,16 @@
                             <div class="row">
                                 <ul class="list-group">
                                     <li class="list-group-item">
-                                        <span>{{newVoting.votingDetails}}</span>
+                                        <span>{{votingDetails}}</span>
                                     </li>
                                     <li class="list-group-item">
-                                        <span>{{newVoting.votingOptions.optionValue}}</span>
+                                        <span>{{votingOptions.optionValue}}</span>
                                     </li>
                                     <li class="list-group-item">
-                                        <span>{{newVoting.votingCloseDate | date:'dd-MM-yyyy'}}</span>
+                                        <span>{{votingCloseDate | date:'dd-MM-yyyy'}}</span>
                                     </li>
                                     <li class="list-group-item">
-                                        <span>{{newVoting.votingVotes}}</span>
+                                        <span>{{votingVotes}}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -91,7 +91,7 @@
         <div class="col-md-6 border border-top-0 border-bottom-0 border-right-0">
             <h4>Voting Results</h4>
             <div id="accordion">
-                <div class="card" ng-repeat="voting in votings | filter: closedVotings">
+                <div class="card" ng-repeat="voting in votings "> 
                     <div class="card-header" id="heading{{userId}}">
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{userId}}" aria-expanded="true" aria-controls="collapse{{userId}}">
