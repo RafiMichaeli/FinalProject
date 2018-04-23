@@ -31,7 +31,8 @@
                             <label class="bold" for="votingTitle">Title:</label>
                             <input type="text" class="form-control" name="" id="votingTitle" placeholder="Title" ng-model="newVoting.votingTitle">
                             <label for="votingDetails">Details:</label>
-                            <input type="textarea" class="form-control" name="" id="votingDetails" placeholder="Describe the issue you want voting on" ng-model="newVoting.votingDetails">
+                            <input type="textarea" class="form-control" name="" id="votingDetails" placeholder="Describe the issue you want voting on"
+                                ng-model="newVoting.votingDetails">
                             <label for="votingOptions">Options:</label>
                             <input type="text" class="form-control" name="" id="votingOptions" placeholder="option" ng-model="newVoting.votingOption">
                             <button class="form-text bg-light border-0 font-weight-bold text-primary mr-4" ng-click="addOption()">
@@ -49,19 +50,17 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col">
+    <div class="row mx-auto p-2">
+        <div class="col-md-6 border border-top-0 border-bottom-0 border-left-0">
             <h4>Active Votings</h4>
             <div id="accordion">
-                <div class="card">
+                <div class="card" ng-repeat="voting in votings">
                     <div class="card-header" id="heading{{userId}}">
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{userId}}" aria-expanded="true" aria-controls="collapse{{userId}}">
-                                <span>{{tenant.userFirstName}}</span>
-                                <span>{{tenant.userLastName}}</span>
+                                <span>{{voting.votingTitle}}</span>
                                 <span>
-                                    <i class="btn material-icons" ng-show="{{tenant.isManager}}">card_membership</i>
-                                    <!--span>Comittee memeber</span-->
+                                    <i class="material-icons">assignment_turned_in</i>
                                 </span>
                             </button>
                         </h5>
@@ -88,7 +87,7 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col-md-6 border border-top-0 border-bottom-0 border-right-0">
             <h4>Voting Results</h4>
             <div class="row">
 

@@ -2,6 +2,7 @@ mainHoaApp.factory('votingService', function ($log, $http, $q, activeUserService
     var votings = [];
 
     function Voting(
+        votingId,
         votingCreatedBy,
         votingCreatedAt,
         votingTitle,
@@ -10,6 +11,7 @@ mainHoaApp.factory('votingService', function ($log, $http, $q, activeUserService
         votingCloseDate,
         votingVotes
     ) {
+        this.votingId = votingId;
         this.votingCreatedBy = votingCreatedBy;
         this.votingCreatedAt = votingCreatedAt;
         this.votingTitle = votingTitle;
@@ -18,9 +20,18 @@ mainHoaApp.factory('votingService', function ($log, $http, $q, activeUserService
         this.votingCloseDate = votingCloseDate;
         this.votingVotes = votingVotes;
     }
+    function Vote(
+        votedBy,
+        votedAt,
+        voteOption){
+            this.votedBy;
+            this.votedAt;
+            this.voteOption;
+        }
 
     function creatNewVoting(newVoting){
         votings.push(new Voting(
+            votings.length +1,
             activeUserService.getUser(),
             "" + new Date(),
             votingTitle,
