@@ -14,6 +14,13 @@ mainHoaApp.controller("tenantsCtrl", function ($scope, $http, $location, message
     $scope.updateTenant = function () {
         tenantsService.updateTenant();
     }
+
+    
+
+
+
+
+
     /*  tenantsService.loadTenants().then(function () {
         $scope.tenants = tenantsService.tenants;
     }); */

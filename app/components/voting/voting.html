@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <div class="row mx-auto p-2">
+    <div class="row mx-auto p-1">
         <div class="col-md-6 border border-top-0 border-bottom-0 border-left-0">
             <h4>Active Votings</h4>
             <div id="accordion">
@@ -82,10 +82,6 @@
                                         <span>{{newVoting.votingVotes}}</span>
                                     </li>
                                 </ul>
-                                <div class="ml-auto p-2">
-                                    <button type="button" class="btn btn-warning border">Update</button>
-                                    <button type="button" class="btn btn-danger border">Delete</button>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -95,7 +91,7 @@
         <div class="col-md-6 border border-top-0 border-bottom-0 border-right-0">
             <h4>Voting Results</h4>
             <div id="accordion">
-                <div class="card" ng-repeat="voting in votings">
+                <div class="card" ng-repeat="voting in votings | filter: closedVotings">
                     <div class="card-header" id="heading{{userId}}">
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{userId}}" aria-expanded="true" aria-controls="collapse{{userId}}">
@@ -119,13 +115,10 @@
                                         <span>{{voting.votingCloseDate}}</span>
                                     </li>
                                     <li class="list-group-item">
-                                        <span>Votings: {{voting.votingVotes}}</span>
+                                        <span class="font-weight-bold">Votings: </span>
+                                        <span>{{voting.votingVotes}}</span>
                                     </li>
                                 </ul>
-                                <div class="ml-auto p-2">
-                                    <button type="button" class="btn btn-warning border">Update</button>
-                                    <button type="button" class="btn btn-danger border">Delete</button>
-                                </div>
                             </div>
                         </div>
                     </div>

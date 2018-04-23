@@ -18,5 +18,25 @@
         "userApt": "3A",
         "isManager": false,
         "userData": "JSON of user Data"
+    },
+    {
+        "userId": 3,
+        "userFirstName": "Bon",
+        "userLastName": "Bon",
+        "userEmail": "bon@bon.com",
+        "userPwd": "123",
+        "userApt": "5A",
+        "isManager": false,
+        "userData": "JSON of user Data"
+    },
+    {
+        "userId": 4,
+        "userFirstName": "Son",
+        "userLastName": "Son",
+        "userEmail": "son@son.com",
+        "userPwd": "123",
+        "userApt": "7A",
+        "isManager": false,
+        "userData": "JSON of user Data"
     }
 ]

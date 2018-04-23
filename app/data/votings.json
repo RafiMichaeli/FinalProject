@@ -30,6 +30,16 @@
                 "votedBy": 2,
                 "votedAt": "12-4-2018",
                 "voteOption": "Green"
+            },
+            {
+                "votedBy": 3,
+                "votedAt": "12-4-2018",
+                "voteOption": "Green"
+            },
+            {
+                "votedBy": 4,
+                "votedAt": "12-4-2018",
+                "voteOption": "Yellow"
             }
         ]
     }
