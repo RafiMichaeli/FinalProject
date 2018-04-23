@@ -2,6 +2,8 @@ mainHoaApp.controller("votingCtrl", function ($scope, $http, $location, activeUs
 
     $scope.votings = votingService.votings;
     
+    votingService.loadVotings();
+
     // $scope.votingOptions = [{optionValue, ""} { optionValue, ""}] //
 
     $scope.creatVoting = function () {

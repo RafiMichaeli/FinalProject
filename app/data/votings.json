@@ -1,0 +1,25 @@
+[
+    {
+        "votingId": 1,
+        "votingCreatedBy": 1,
+        "votingCreatedAt": "10-4-2018",
+        "votingTitle": "What color should we paint the building",
+        "votingDetails": "You need to choose the color of the outside walls of the building",
+        "votingOptions": [
+            {
+                "optinoValue": "Yellow"
+            },
+            {
+                "optinoValue": "Black"
+            },
+            {
+                "optinoValue": "Green"
+            },
+            {
+                "optinoValue": "Orange"
+            }
+        ],
+        "votingCloseDate": "",
+        "votingVotes": ""
+    }
+]
