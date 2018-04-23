@@ -18,7 +18,7 @@ mainHoaApp.factory('votingService', function ($log, $http, $q, activeUserService
         this.votingTitle = votingTitle;
         this.votingDetails = votingDetails;
         this.votingOptions = votingOptions;
-        this.votingCloseDate = votingCloseDate;
+        this.votingCloseDate = new Date(votingCloseDate);
         this.votingVotes = votingVotes;
     }
     function Vote(
