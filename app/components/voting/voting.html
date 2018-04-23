@@ -76,7 +76,7 @@
                                         <span>{{newVoting.votingOptions.optionValue}}</span>
                                     </li>
                                     <li class="list-group-item">
-                                        <span>{{newVoting.votingCloseDate}}</span>
+                                        <span>{{newVoting.votingCloseDate | date:'dd-MM-yyyy'}}</span>
                                     </li>
                                     <li class="list-group-item">
                                         <span>{{newVoting.votingVotes}}</span>
@@ -112,7 +112,7 @@
                                     </li>
                                     <li class="list-group-item">
                                         <span class="font-weight-bold">Vote closed on:</span>
-                                        <span>{{voting.votingCloseDate}}</span>
+                                        <span>{{voting.votingCloseDate | date:'dd-MM-yyyy'}}</span>
                                     </li>
                                     <li class="list-group-item">
                                         <span class="font-weight-bold">Votings: </span>

@@ -11,7 +11,7 @@ mainHoaApp.controller("votingCtrl", function ($scope, $http, $location, activeUs
     }
 
     $scope.closedVotings = function () {
-        return votingService.voting.votingCloseDate < new Date() ;
+        return $scope.votings.voting.votingCloseDate < new Date() ;
     };
 
 

@@ -70,7 +70,7 @@ mainHoaApp.factory('votingService', function ($log, $http, $q, activeUserService
             votingTitle,
             votingDetails,
             votingOptions,
-            // new Date(votingCloseDate) 
+            new Date(votingCloseDate) 
         ))
     }
 
