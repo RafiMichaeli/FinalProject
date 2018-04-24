@@ -2,9 +2,8 @@ var mainHoaApp = angular.module('mainHoaApp', ['ngRoute', "googlechart"])
 
 mainHoaApp.config(function ($routeProvider) {
     $routeProvider
-        .when("/landingpage", {
-            templateUrl: 'app/components/landingpage/landingPage.html',
-      controller: 'loginCtrl'
+        .when("/", {
+            templateUrl: "app/components/landingpage/landingpage.html"
         })
         .when("/home", {
             templateUrl: "/app/components/home/home.html",
@@ -16,11 +15,11 @@ mainHoaApp.config(function ($routeProvider) {
         })
         .when("/tenants", {
             templateUrl: "app/components/tenants/tenants.html",
-            controller: "tenantsCtrl"
+            // controller: "tenantsCtrl"
         })
         .when("/voting", {
-            templateUrl: "app/components/voting/voting.html",
-            controller: "votingCtrl" 
+            templateUrl: "app/components/voting/voting.html"
+            // controller: 
         })
         .when("/issues", {
             templateUrl: "app/components/issues/issues.html"
