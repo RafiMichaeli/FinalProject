@@ -2,9 +2,9 @@ var mainHoaApp = angular.module('mainHoaApp', ['ngRoute', "googlechart"])
 
 mainHoaApp.config(function ($routeProvider) {
     $routeProvider
-        .when("#!/", {
-            templateUrl: "app/components/landingpage/landingpage.html",
-            controller: "loginCtrl"
+        .when("/landingpage", {
+            templateUrl: 'app/components/landingpage/landingPage.html',
+      controller: 'loginCtrl'
         })
         .when("/home", {
             templateUrl: "/app/components/home/home.html",
