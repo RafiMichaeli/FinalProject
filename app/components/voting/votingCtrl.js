@@ -10,6 +10,14 @@ mainHoaApp.controller("votingCtrl", function ($scope, $http, $location, activeUs
         votingService.creatNewVoting($scope.newVoting);
     }
 
+    $scope.openVotings = function (voting) {
+        if ((voting.votingCloseDate) >= new Date()) {
+            return true;
+        } else {
+            return false;
+        }
+
+    };
 
     $scope.closedVotings = function (voting) {
         if ((voting.votingCloseDate) < new Date()) {
@@ -19,9 +27,5 @@ mainHoaApp.controller("votingCtrl", function ($scope, $http, $location, activeUs
         }
     };
 
-
-    $scope.openVotings = function (voting) {
-     return !closedVotings(voting);    
-    }
 
 })

@@ -7,16 +7,16 @@
         "votingDetails": "You need to choose the color of the outside walls of the building",
         "votingOptions": [
             {
-                "optinoValue": "Yellow"
+                "optionValue": "Yellow"
             },
             {
-                "optinoValue": "Black"
+                "optionValue": "Black"
             },
             {
-                "optinoValue": "Green"
+                "optionValue": "Green"
             },
             {
-                "optinoValue": "Orange"
+                "optionValue": "Orange"
             }
         ],
         "votingCloseDate": "2018-04-20",
@@ -47,20 +47,20 @@
         "votingId": 2,
         "votingCreatedBy": 1,
         "votingCreatedAt": "10-4-2018",
-        "votingTitle": "What color should we paint the building",
-        "votingDetails": "You need to choose the color of the outside walls of the building",
+        "votingTitle": "why is the sky blue?",
+        "votingDetails": "You need to choose the color of the sky ",
         "votingOptions": [
             {
-                "optinoValue": "Yellow"
+                "optionValue": "Yellow"
             },
             {
-                "optinoValue": "Black"
+                "optionValue": "Black"
             },
             {
-                "optinoValue": "Green"
+                "optionValue": "Green"
             },
             {
-                "optinoValue": "Orange"
+                "optionValue": "Orange"
             }
         ],
         "votingCloseDate": "2018-04-30",

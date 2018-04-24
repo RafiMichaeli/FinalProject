@@ -43,7 +43,7 @@
 
     <div class="row mx-auto ">
         <div class="col-md-6 border border-top-0 border-bottom-0 border-left-0">
-            <div class="row ">
+            <div class="row form-inline mx-auto ">
                 <div class="col-12 mx-auto">
                     <!-- Button trigger modal of new message -->
                     <button class="btn border float-right border-0 bg-light font-weight-bold text-primary mr-4" data-toggle="modal" data-target="#newVotingModal">
@@ -55,7 +55,7 @@
             </div>
             <h4>Active Votings</h4>
             <div id="accordion">
-                <div class="card" ng-repeat="voting in votings | filter: openVoting(voting)">
+                <div class="card " ng-repeat="voting in votings | filter: openVotings">
                     <div class="card-header" id="heading{{voting.votingId}}">
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{voting.votingId}}" aria-expanded="true" aria-controls="collapse{{voting.votingId}}">
@@ -69,18 +69,27 @@
                     <div id="collapse{{voting.votingId}}" class="collapse show" aria-labelledby="heading{{voting.votingId}}" data-parent="#accordion">
                         <div class="card-body d-flex flex-column">
                             <div class="row">
-                                <ul class="list-group">
+                                <ul class="list-group col">
                                     <li class="list-group-item">
+                                        <span class="font-weight-bold">Voting details: </span>
+                                        <br>
                                         <span>{{voting.votingDetails}}</span>
                                     </li>
                                     <li class="list-group-item">
-                                        <span>{{voting.votingOptions}}</span>
+                                        <span class="font-weight-bold">Voting options(select): </span>
+                                        <br>
+                                        <div ng-repeat="optionValue in voting.votingOptions">
+                                            <span>{{votingOptions.optionValue}}</span>
+                                            <span><input class="form-group" type="radio" name="vote"></span>
+                                        </div>
+                                        <span class="float-right"><button type="button" class="btn btn-primary">Vote !</button></span>
                                     </li>
                                     <li class="list-group-item">
+                                        <span class="font-weight-bold">Voting will be closed on: </span>
+                                        <br>
                                         <span>{{voting.votingCloseDate | date:'dd-MM-yyyy'}}</span>
                                     </li>
                                     <li class="list-group-item">
-                                        <span>{{votingVotes}}</span>
                                     </li>
                                 </ul>
                             </div>
@@ -90,12 +99,12 @@
             </div>
         </div>
         <div class="col-md-6 border border-top-0 border-bottom-0 border-right-0">
-            <div cla ss="row form-inline mx-auto">
+            <div class="row form-inline mx-auto">
                 <input type="search" class="form-control w-100 m-2" name="" id="searchInTenants" placeholder="Search by tenant name" ng-model="searchTenants">
             </div>
             <h4>Voting Results</h4>
             <div id="accordion">
-                <div class="card col" ng-repeat="voting in votings | filter: closedVotings(voting) ">
+                <div class="card " ng-repeat="voting in votings | filter: closedVotings">
                     <div class="card-header" id="heading{{voting.votingId}}">
                         <h5 class="mb-0">
                             <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{voting.votingId}}" aria-expanded="true" aria-controls="collapse{{voting.votingId}}">
@@ -107,7 +116,7 @@
                         </h5>
                     </div>
                     <div id="collapse{{voting.votingId}}" class="collapse show" aria-labelledby="heading{{voting.votingId}}" data-parent="#accordion">
-                        <div class="card-body">
+                        <div class="card-body d-flex flex-column">
                             <div class="row">
                                 <ul class="list-group col">
                                     <li class="list-group-item border-0">
@@ -115,17 +124,13 @@
                                         <br>
                                         <span> {{voting.votingDetails}}</span>
                                     </li>
-                                    <li class="list-group-item bg-light">
+                                    <li class="list-group-item bg-light text-primary border border-primary">
                                         <span class="font-weight-bold">Vote closed on:</span>
                                         <br>
                                         <span>{{voting.votingCloseDate | date:'dd-MM-yyyy'}}</span>
                                     </li>
-                                    <!-- <li class="list-group-item">
-                                        <span class="font-weight-bold">Votings: </span>
-                                        <span>{{voting.votingVotes}}</span>
-                                    </li> -->
                                 </ul>
-                                <div class="col border">
+                                <div class="col border-0">
                                     <span class="font-weight-bold">Voting Results</span>
                                     <div>Chart goes here</div>
                                 </div>

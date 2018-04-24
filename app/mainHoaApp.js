@@ -1,4 +1,4 @@
-var mainHoaApp = angular.module('mainHoaApp', ['ngRoute'])
+var mainHoaApp = angular.module('mainHoaApp', ['ngRoute','googlechart'])
 
 mainHoaApp.config(function ($routeProvider) {
     $routeProvider
