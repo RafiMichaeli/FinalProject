@@ -1,4 +1,4 @@
-var mainHoaApp = angular.module('mainHoaApp', ['ngRoute','googlechart'])
+var mainHoaApp = angular.module('mainHoaApp', ['ngRoute', "googlechart"])
 
 mainHoaApp.config(function ($routeProvider) {
     $routeProvider
@@ -19,11 +19,11 @@ mainHoaApp.config(function ($routeProvider) {
         })
         .when("/voting", {
             templateUrl: "app/components/voting/voting.html"
-           // controller: 
+            // controller: 
         })
         .when("/issues", {
             templateUrl: "app/components/issues/issues.html"
-           // controller: 
+            // controller: 
         })
         .otherwise({
             templateUrl: "/app/components/home/home.html",

@@ -62,21 +62,24 @@ mainHoaApp.factory('votingService', function ($log, $http, $q, activeUserService
 
 
 
-    function creatNewVoting(newVoting) {
+    function createNewVoting(newVoting) {
+        console.log("Hi")
         votings.push(new Voting(
             votings.length + 1,
-            activeUserService.getUser(),
+            activeUserService.getUser().userId,
             "" + new Date(),
-            votingTitle,
-            votingDetails,
-            votingOptions,
-            new Date(votingCloseDate) 
-        ))
-    }
+            newVoting.votingTitle,
+            newVoting.votingDetails,
+            newVoting.votingOptions,
+            new Date(votingCloseDate)
+        ));
+        console.log(newVoting);
+
+    } 
 
     return {
         loadVotings: loadVotings,
-        creatNewVoting: creatNewVoting,
+        createNewVoting: createNewVoting,
         votings: votings
     }
 })

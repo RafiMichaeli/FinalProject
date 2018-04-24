@@ -1,4 +1,4 @@
-mainHoaApp.factory('messagesService', function ($log, $http, $q, activeUserService) {
+mainHoaApp.factory('messagesService', function ($log, $http, $q, activeUserService, tenantsService) {
     var messages = [];
     var msgWasEverLoaded = false;
     var comments = [];
@@ -11,7 +11,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q, activeUserServi
         messageType,
         messageComments) {
         this.messageId = messageId;
-        this.messageCreatedBy = messageCreatedBy;
+        this.messageCreatedBy = tenantsService.tenants[messageCreatedBy];
         this.messageCreatedAt = new Date(messageCreatedAt);
         this.messageSubject = messageSubject;
         this.messageBody = messageBody;
@@ -28,7 +28,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q, activeUserServi
     function Comment(commentCreateBy,
         commentCreatedAt,
         commentBody, ) {
-        this.commentCreateBy = commentCreateBy;
+        this.commentCreateBy = tenantsService.tenants[commentCreateBy];
         this.commentCreatedAt = new Date(commentCreatedAt);
         this.commentBody = commentBody;
     }
@@ -69,8 +69,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q, activeUserServi
             "" + new Date(),
             newMessage.messageSubject,
             newMessage.messageBody,
-            newMessage.messageType,
-            []);
+            newMessage.messageType);
         messages.push(message);
     }
 

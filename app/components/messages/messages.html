@@ -80,14 +80,19 @@
                     </div>
                     <div id="collapse{{message.messageId}}" class="collapse show" aria-labelledby="heading{{message.messageId}}" data-parent="#accordion">
                         <div class="card-body row">
-                            <div class="col float-left">
-                                <img class="rounded float-left" src="" alt="">
-                                <label class="font-weight-bold" for="messageDetails">Details:</label>
-                                <p id="messageDetails" class="">
-                                    {{message.messageBody}}
-                                </p>
-                                <label class="font-weight-bold" for="messagePriorety">Type:</label>
-                                <span>{{message.messageType}}</span>
+                            <div class="">
+                                <div class="col-6 float-left">
+                                    <div class="col">
+                                        <i class="material-icons">person</i>
+                                        <span>{{message.messageCreatedBy.userFirstName}}</span>
+                                    </div>
+                                    <label class="font-weight-bold" for="messageDetails">Details:</label>
+                                    <p id="messageDetails" class="">
+                                        {{message.messageBody}}
+                                    </p>
+                                    <label class="font-weight-bold" for="messagePriorety">Type:</label>
+                                    <span>{{message.messageType}}</span>
+                                </div>
                             </div>
                             <div class="border">
                             </div>
@@ -96,7 +101,7 @@
                                     <span class="font-weight-bold">Comments:</span>
                                     <div class="row w-100 align-left" ng-repeat="comment in message.messageComments">
                                         <i class="material-icons">person</i>
-                                        <span>{{currentUser.userFirstName}}</span>
+                                        <span>{{comment.commentCreateBy.userFirstName}}</span>
                                         <div class="col card m-1">
                                             <span class="card-text">{{comment.commentBody}}</span>
                                         </div>

@@ -1,4 +1,4 @@
-mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messagesService, activeUserService) {
+mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messagesService, activeUserService, tenantsService) {
 
     $scope.messages = [];
     $scope.comments = [];
@@ -6,6 +6,8 @@ mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messag
     $scope.commentBody = "";
     $scope.currentUser = activeUserService.getUser();
 
+    tenantsService.loadTenants();
+    
     //login as admin - to be deleted //
     /* function loginAllTime() {
         if (activeUserService.isLoggedIn() === false) (
@@ -18,6 +20,7 @@ mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messag
 
     messagesService.loadMessages().then(function () {
         $scope.messages = messagesService.messages;
+        
     });
 
     $scope.createMessage = function () {
