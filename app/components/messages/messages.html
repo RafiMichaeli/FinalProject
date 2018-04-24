@@ -45,7 +45,7 @@
                                 <label class="m-1" for="newMessageSubject">Subject:</label>
                                 <input class="form-control" type="text" name="" id="newMessageSubject" ng-model="newMessage.messageSubject" placeholder="Message Subject">
                                 <label class="m-1" for="newMessageBody">Body:</label>
-                                <textarea type="text" class="form-control" id="newMessageBody" ng-model="newMessage.messageBody" placeholder="Type your message here"></textarea>
+                                <textarea type="textarea" class="form-control" id="newMessageBody" ng-model="newMessage.messageBody" placeholder="Type your message here"></textarea>
                                 <label class="m-1" for="newMessageType">Type: </label>
                                 <select class="form-control w-50" id="newMessageType" ng-model="newMessage.messageType">
                                     <option value="">--Select Message Type--</option>
@@ -53,9 +53,6 @@
                                     <option value="warning">Important</option>
                                     <option value="build">Maintanance</option>
                                 </select>
-                                <!--label for="imgLoad">Image Load: </label>
-                                        <input type="file" name="" id="imgLoad" ng-model="imgLoad">
-                                        <img src="{{imgLoad.path}}" alt="" srcset=""-->
                             </div>
                         </form>
                         <div class="modal-footer">

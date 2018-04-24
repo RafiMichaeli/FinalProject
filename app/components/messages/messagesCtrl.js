@@ -8,16 +8,6 @@ mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messag
 
     tenantsService.loadTenants();
     
-    //login as admin - to be deleted //
-    /* function loginAllTime() {
-        if (activeUserService.isLoggedIn() === false) (
-            activeUserService.login("rafi@rafi.com", "123")
-        )
-    } */
-
-    //login as admin - to be deleted //
-
-
     messagesService.loadMessages().then(function () {
         $scope.messages = messagesService.messages;
         
@@ -26,7 +16,6 @@ mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messag
     $scope.createMessage = function () {
         messagesService.createNewMessage($scope.newMessage);
         $scope.newMessage = {};
-        //$modalInstance.close();
     }
 
     $scope.createComment = function (message) {
@@ -38,7 +27,6 @@ mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messag
         var index = messageComments.indexOf(comment);
         messageComments.splice(index, 1);
     }
-
 
     $scope.filterInMessages = function (messages) {
         if ((!$scope.searchMessages || messages.messageSubject.toLowerCase().includes($scope.searchMessages.toLowerCase())) &&
