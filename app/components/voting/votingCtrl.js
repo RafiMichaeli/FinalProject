@@ -3,7 +3,7 @@ mainHoaApp.controller("votingCtrl", function ($scope, $http, $location, activeUs
     $scope.votings = votingService.votings;
 
     votingService.loadVotings();
-    $scope.votingOption = [];
+    $scope.votingOptions = [{optionValue: ""}];
 
     // $scope.votingOptions = [{optionValue, ""} { optionValue, ""}] //
 
@@ -31,7 +31,9 @@ mainHoaApp.controller("votingCtrl", function ($scope, $http, $location, activeUs
     };
 
     $scope.addOption = function(optionVal){
-        $scope.votingOption.push(optionVal);
+        console.log(optionVal);
+        console.log($scope.votingOptions);
+        $scope.votingOptions.push({optionValue: ""});
     };
 
 

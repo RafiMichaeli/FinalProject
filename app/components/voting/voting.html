@@ -25,9 +25,9 @@
                             <input type="textarea" class="form-control" name="" id="votingDetails" placeholder="Describe the issue you want voting on"
                                 ng-model="newVoting.votingDetails">
                             <label for="votingOptions">Options:</label>
-                            <div ngrepeat="optionVal in votingOption">
-                                <input type="text" class="form-control" name="" id="votingOptions{{votingOptions.indexOf(optionVal)}}" placeholder="option"
-                                    ng-model="newVoting.votingOption">
+                            <div ng-repeat="optionValue in votingOptions">
+                                <input type="text" class="form-control" name="" id="{{indexOf(optionValue)}}" placeholder="option {{indexOf(optionValue)}} "
+                                    ng-model="newVoting.votingOptions">
                             </div>
                             <button class="form-text bg-light border-0 font-weight-bold text-primary mr-4" ng-click="addOption()">
                                 <span>+ add option</span>
