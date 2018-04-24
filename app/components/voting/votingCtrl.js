@@ -11,22 +11,17 @@ mainHoaApp.controller("votingCtrl", function ($scope, $http, $location, activeUs
     }
 
 
-    $scope.closedVotings = function () {
-        for (var f = 0; f < $scope.votings.length;) {
-            if (($scope.votings[f].votingCloseDate) < new Date()) {
-                return;
-            } else {
-                f++;
-            }
+    $scope.closedVotings = function (voting) {
+        if ((voting.votingCloseDate) < new Date()) {
+            return true;
+        } else {
+            return false;
         }
     };
 
-    $scope.openVotings = function () {
-        var today = new Date();
-        for (var i = 0; i < $scope.votings.length; i++) {
-            return $scope.votings[i].votingCloseDate >= today;
-        }
 
-    };
+    $scope.openVotings = function (voting) {
+     return !closedVotings(voting);    
+    }
 
 })

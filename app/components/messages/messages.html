@@ -71,10 +71,10 @@
                 <div class="card" ng-repeat="message in messages | orderBy: sortBy | filter: filterInMessages">
                     <div class="card-header" id="heading{{message.messageId}}">
                         <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{message.messageId}}" aria-expanded="false" aria-controls="collapse{{message.messageId}}">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{message.messageId}}" aria-expanded="true" aria-controls="collapse{{message.messageId}}">
                                 {{message.messageSubject}}
                             </button>
-                            <span>{{message.messageCreatedAt}}</span>
+                            <span>{{message.messageCreatedAt| date: 'dd-MM-yyyy'}}</span>
                             <i class="material-icons float-right text-primary">{{message.messageType}}</i>
                         </h5>
                     </div>
