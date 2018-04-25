@@ -7,15 +7,6 @@ mainHoaApp.controller("messagesCtrl", function ($scope, $http, $location, messag
     $scope.currentUser = activeUserService.getUser();
 
     tenantsService.loadTenants();
-    
-    //login as admin - to be deleted //
-    /* function loginAllTime() {
-        if (activeUserService.isLoggedIn() === false) (
-            activeUserService.login("rafi@rafi.com", "123")
-        )
-    } */
-
-    //login as admin - to be deleted //
 
 
     messagesService.loadMessages().then(function () {

@@ -60,8 +60,6 @@ mainHoaApp.factory('votingService', function ($log, $http, $q, activeUserService
 
     }
 
-
-
     function createNewVoting(newVoting) {
         console.log("Hi")
         votings.push(new Voting(

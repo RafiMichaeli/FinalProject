@@ -12,7 +12,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q, activeUserServi
         messageComments) {
         this.messageId = messageId;
         this.messageCreatedBy = messageCreatedBy;
-        this.messageCreatedAt = messageCreatedAt;
+        this.messageCreatedAt = new Date (messageCreatedAt);
         this.messageSubject = messageSubject;
         this.messageBody = messageBody;
         this.messageType = messageType;
@@ -83,11 +83,7 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q, activeUserServi
         message.messageComments.push(comment);
     }
 
-    // function deleteComment (messageComments, comment){
-    // }
-
     return {
-        // deleteComment: deleteComment,
         createNewComment: createNewComment,
         createNewMessage: creatNewMessage,
         messages: messages,
