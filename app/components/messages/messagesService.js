@@ -66,6 +66,9 @@ mainHoaApp.factory('messagesService', function ($log, $http, $q, activeUserServi
         var message = new Message(
             messages.length + 1,
             activeUserService.getUser().userId,
+            /* if (activeUserService.getUser().userId = "undefined"){
+                return alert("User is not logged in");
+            } */
             "" + new Date(),
             newMessage.messageSubject,
             newMessage.messageBody,

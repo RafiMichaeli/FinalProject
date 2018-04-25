@@ -15,7 +15,12 @@ mainHoaApp.controller("tenantsCtrl", function ($scope, $http, $location, message
         tenantsService.updateTenant();
     }
 
-    
+    $scope.filterInTenasnts = function (tenants) {
+        if (!$scope.searchTenants || tenants.userFirstName.toLowerCase().includes($scope.searchTenants.toLowerCase())) {
+            return true;
+        }
+        return false;
+    };
 
 
 
