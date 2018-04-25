@@ -53,14 +53,12 @@
                                     <option value="warning">Important</option>
                                     <option value="build">Maintanance</option>
                                 </select>
-                                <!--label for="imgLoad">Image Load: </label>
-                                        <input type="file" name="" id="imgLoad" ng-model="imgLoad">
-                                        <img src="{{imgLoad.path}}" alt="" srcset=""-->
+                                <input type="hidden" name="messageComments" ng-model="newMessage.messageComment" value="test">
                             </div>
                         </form>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" ng-click="createMessage()" data-dismiss="modal">Save</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" ng-click="createMessage()" data-dismiss="modal">Create</button>
                         </div>
                     </div>
                 </div>
@@ -80,8 +78,8 @@
                     </div>
                     <div id="collapse{{message.messageId}}" class="collapse show" aria-labelledby="heading{{message.messageId}}" data-parent="#accordion">
                         <div class="card-body row">
-                            <div class="">
-                                <div class="col-6 float-left">
+                            <div class="col">
+                                <div class="col float-left">
                                     <div class="col">
                                         <i class="material-icons">person</i>
                                         <span>{{message.messageCreatedBy.userFirstName}}</span>
