@@ -6,10 +6,6 @@ mainHoaApp.config(function ($routeProvider) {
             templateUrl: "app/components/landingpage/landingpage.html",
             controller: "loginCtrl"
         })
-        .when("/landingpage", {
-            templateUrl: "app/components/landingpage/landingpage.html",
-            controller: "loginCtrl"
-        })
         .when("/home", {
             templateUrl: "/app/components/home/home.html",
             controller: 'homeCtrl'
@@ -31,7 +27,7 @@ mainHoaApp.config(function ($routeProvider) {
             // controller: 
         })
         .otherwise({
-            templateUrl: "/app/components/home/home.html",
-            controller: 'homeCtrl'
+            templateUrl: "app/components/landingpage/landingpage.html",
+            controller: "loginCtrl"
         });
 });
