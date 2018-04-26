@@ -1,6 +1,6 @@
 mainHoaApp.directive('landingPageDirective', function($location) {    
     return {
-      templateUrl: 'app/components/landingpage/landingpage.html',
+      templateUrl: 'app/components/landingpage/landingPage.html',
       controller: 'loginCtrl'
     };
   })
