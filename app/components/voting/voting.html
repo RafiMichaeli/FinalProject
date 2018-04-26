@@ -27,13 +27,13 @@
                             <label for="votingOptions">Options:</label>
                             <div ng-repeat="optionValue in votingOptions">
                                 <input type="text" class="form-control" name="optionValue" id="optionValue" placeholder="option"
-                                    ng-model="newOptionValue">
+                                    ng-model="newVoting.votingOptions">
                             </div>
                             <button class="form-text bg-light border-0 font-weight-bold text-primary mr-4" ng-click="addOption()">
                                 <span>+ add option</span>
                             </button>
                             <label for="votingCloseDate"> Voting End date:</label>
-                            <input type="date" class="form-control" name="" id="votingCloseDate" ng-model="newVoting.votingCloseDate">
+                            <input type="date" class="form-control" name="votingCloseDate" id="votingCloseDate" ng-model="newVoting.votingCloseDate">
                         </div>
                     </form>
                     <div class="modal-footer">
