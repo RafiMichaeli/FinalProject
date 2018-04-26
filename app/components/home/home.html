@@ -1,11 +1,17 @@
 <div class="container" ng-controller="homeCtrl">
     <navbar-home-directive></navbar-home-directive>
     <main>
-        <h1>HOME -this is the palce of the Dashboard</h1>
-        <div class="bg-light">
-            <p>
-            </p> main arae</div>
-
+        <div class="row">
+            <div class="col border">
+                <messages-directive></messages-directive>
+            </div>
+            <div class="col border">
+                <voting-directive></voting-directive>
+            </div>
+        </div>
+        <div class="row">
+            BBB
+        </div>
     </main>
     <footer-directive></footer-directive>
 </div>
