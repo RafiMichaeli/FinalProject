@@ -27,7 +27,7 @@ mainHoaApp.config(function ($routeProvider) {
             // controller: 
         })
         .otherwise({
-            templateUrl: "app/components/landingpage/landingpage.html",
+            templateUrl: "app/components/landingpage/landingPage.html",
             controller: "loginCtrl"
         });
 });
