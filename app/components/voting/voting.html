@@ -26,8 +26,8 @@
                                 ng-model="newVoting.votingDetails">
                             <label for="votingOptions">Options:</label>
                             <div ng-repeat="optionValue in votingOptions">
-                                <input type="text" class="form-control" name="" id="{{indexOf(optionValue)}}" placeholder="option {{indexOf(optionValue)}} "
-                                    ng-model="newVoting.votingOptions">
+                                <input type="text" class="form-control" name="optionValue" id="optionValue" placeholder="option"
+                                    ng-model="newOptionValue">
                             </div>
                             <button class="form-text bg-light border-0 font-weight-bold text-primary mr-4" ng-click="addOption()">
                                 <span>+ add option</span>
@@ -115,7 +115,7 @@
                 <div class="card " ng-repeat="voting in votings | filter: closedVotings">
                     <div class="card-header" id="heading{{voting.votingId}}">
                         <h5 class="mb-0">
-                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapse{{voting.votingId}}" aria-expanded="true" aria-controls="collapse{{voting.votingId}}">
+                            <button class="btn btn-link" data-toggle="collapse show" data-target="#collapse{{voting.votingId}}" aria-expanded="true" aria-controls="collapse{{voting.votingId}}">
                                 <span>{{voting.votingTitle}}</span>
                                 <span>
                                     <i class="material-icons">assignment_turned_in</i>
